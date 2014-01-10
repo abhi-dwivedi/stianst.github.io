@@ -224,10 +224,21 @@
             var token = JSON.parse(req.responseText)['access_token'];
             token = JSON.parse(atob(token.split('.')[1]));
 
+            delete token.jti;
+            delete token.exp;
+            delete token.nbf;
+            delete token.iat;
+            delete token['allowed-origins'];
+            for (var i in token['resource_access']) {
+                delete token['resource_access'][i]['verify_caller'];
+            }
+
             document.getElementById('auth-status').innerHTML = '<p>Received token</p><pre>' + JSON.stringify(token, null, 2) + '</pre>';
         } else {
             document.getElementById('auth-status').innerHTML = '<p>Failed to obtain token</p><pre>' + req.statusText + '</pre>';
         }
+
+        Reveal.slide(3);
     }
 
 </script>
