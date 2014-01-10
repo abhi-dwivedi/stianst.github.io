@@ -52,8 +52,8 @@
 
     <ul>
         <li>Browsers, mobiles and clouds</li>
-        <li>Many accounts</li>
-        <li>Admin headache</li>
+        <li>Many accounts & passwords</li>
+        <li>Frustrated admins</li>
     </ul>
 </section>
 
@@ -71,7 +71,7 @@
 </section>
 
 <section>
-    <p>Why implement all that yourself?</p>
+    <h3>Why implement all that yourself?</h3>
 </section>
 
 <section>
@@ -138,17 +138,15 @@
         <img src="how-3.png"/>
     </section>
     <section>
-        <p>Token contains details about the user and permissions</p>
+        <h3>Token contains details about the user and permissions</h3>
 
-        <p>
-            <small>JSON Web Token (JWT) & JSON Web Signature (JWS)</small>
-        </p>
+        <p><small>JSON Web Token (JWT) & JSON Web Signature (JWS)</small></p>
     </section>
     <section>
         <img src="how-4.png"/>
     </section>
     <section>
-        <p>Token is signed so can be verified without contacting Keycloak</p>
+        <h3>Token is signed so can be verified locally</h3>
     </section>
 </section>
 
@@ -168,7 +166,7 @@
         <img src="grants-3.png"/>
     </section>
     <section>
-        <p>App exchanges code for token and passes token with requests...</p>
+        <h3>App exchanges code for token...</h3>
     </section>
 </section>
 
@@ -176,7 +174,7 @@
     <section>
         <h2>Admin Console</h2>
 
-        <p>Centralized management console for realms, applications and users</p>
+        <p>Centralized management console</p>
     </section>
     <section>
         <img src="admin-console.png"/>
@@ -189,14 +187,7 @@
         <ul>
             <li>Login</li>
             <li>Registration</li>
-            <li>Login workflows
-                <ul>
-                    <li>Recover password</li>
-                    <li>Reset password</li>
-                    <li>Update profile</li>
-                    <li>...</li>
-                </ul>
-            </li>
+            <li>Account workflows</li>
         </ul>
     </section>
     <section>
@@ -213,7 +204,7 @@
         <ul>
             <li>Profile</li>
             <li>Password</li>
-            <li>Multi-factor auth</li>
+            <li>Multi-factor</li>
         </ul>
     </section>
     <section>
@@ -225,7 +216,19 @@
     <section>
         <h2>Social</h2>
 
-        <p>Users can login with their Google, Facebook or Twitter accounts</p>
+        <p>Users can login with their social accounts</p>
+    </section>
+    <section>
+        <img src="social.png"/>
+    </section>
+</section>
+
+<section>
+    <section>
+        <h2>Adapters</h2>
+
+        <p>Adapters for WildFly, EAP and AS7</p>
+        <p><small>More to come in the future!</small></p>
     </section>
     <section>
         <img src="social.png"/>
@@ -237,17 +240,18 @@
         <h2>What's Next?</h2>
         <ul>
             <li>Audit</li>
-            <li>Theme support for login forms and account management</li>
-            <li>View available apps in account management</li>
-            <li>Manage client grants in account management</li>
-            <li>Adapters for HTML5, Android, iOS, Native</li>
-            <li>Federation (ActiveDirectory, LDAP, Relational database, ...)</li>
-            <li>More social providers (GitHub, LinkedIn, ...)</li>
-            <li>More multifactor authentication (YubiKey, Email, SMS)</li>
-            <li>NoSQL store</li>
+            <li>WildFly integration</li>
+            <li>Theme support</li>
+            <li>Users created clients</li>
+            <li>Federation</li>
+            <li>Brokering</li>
             <li>OpenID Connect</li>
-            <li>Broker authentication (single password on many servers/realms)</li>
             <li>SAML?</li>
+            <li>More OAuth2 (refresh, implicit?)</li>
+            <li>More adapters (HTML5, Android, iOS, Native)</li>
+            <li>More social providers (GitHub, LinkedIn, ...)</li>
+            <li>More multi-factor (YubiKey, Email, SMS, ...)</li>
+            <li>More stores (NoSQL, files)</li>
             <li>...</li>
         </ul>
     </section>
@@ -257,10 +261,10 @@
     <section>
         <h1><a href="http://www.keycloak.org">keycloak.org</a></h1>
 
-        <p>Alpha just released!</p>
+        <h3>Alpha just released!</h3>
 
         <p>
-            <small>#keycloak on Freenode</small>
+            <small>#keycloak & mailing lists</small>
         </p>
     </section>
 </section>
