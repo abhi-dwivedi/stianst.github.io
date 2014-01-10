@@ -173,7 +173,7 @@
                     throw 'invalid config';
                 }
 
-                if (keycloakConfig.credentials.password == 'INSERT APPLICATION PASSWORD') {
+                if (keycloakConfig.credentials.password == 'INSERT APPLICATION PASSWORD' || keycloakConfig.credentials.password == 'INSERT CLIENT PASSWORD') {
                     throw 'password not set';
                 }
 
