@@ -40,58 +40,122 @@
 <section>
     <img src="keycloak-logo.png"/>
 
-    <p><small>Stian Thorgersen / stian@redhat.com</small></p>
+    <p>Stian Thorgersen / stian@redhat.com</p>
 </section>
 
 <section>
-    <h3>Authentication and Authorization server</h3>
+    <h2>Auth and Authz server</h2>
+
     <p>For HTML5, Mobile and Desktop Apps</p>
-
-</section>
-
-<section>
-    <h2>Features</h2>
-    <ul>
-        <li>Admin console</li>
-        <li>Login and workflows</li>
-        <li>Account management</li>
-        <li>Multi-factor auth</li>
-        <li>Social login</li>
-        <li>...</li>
-    </ul>
-</section>
-
-<section>
-    <h2>Why?</h2>
-
-    <ul>
-        <li>Many Apps</li>
-        <li>Many Accounts</li>
-        <li>Many Consoles</li>
-    </ul>
-</section>
-
-<section>
-    <h3>Why implement it yourself?</h3>
-    <p><small>It's not just a single login form!</small></p>
 </section>
 
 <section>
     <section>
-        <h2>Overview</h2>
+        <h2>Features</h2>
+    </section>
+
+    <section>
+        <h3>Log In</h3>
+
+        <p>Configurable and themeable login forms</p>
+    </section>
+
+    <section>
+        <h3>Single Sign-On (and Out)</h3>
+    </section>
+
+    <section>
+        <img src="login.png"/>
+    </section>
+
+    <section>
+        <h3>Registration</h3>
+
+        <p>Configurable and themeable registration forms</p>
+    </section>
+
+    <section>
+        <img src="register.png"/>
+    </section>
+
+    <section>
+        <h3>Account workflows</h3>
+        <ul>
+            <li>Recover username/password</li>
+            <li>Verify email</li>
+            <li>Update profile</li>
+            <li>Reset password</li>
+            <li>Configure multi-factor auth</li>
+        </ul>
+    </section>
+
+    <section>
+        <img src="workflow.png"/>
+    </section>
+
+    <section>
+        <h3>Management</h3>
+
+        <p>REST and HTML5 Admin Console</p>
+    </section>
+
+    <section>
+        <img src="admin-console.png"/>
+    </section>
+
+    <section>
+        <h3>Multi-factor Authentication</h3>
+
+        <p>Password alone is not enough</p>
+    </section>
+
+    <section>
+        <img src="multi-fact.png"/>
+    </section>
+
+    <section>
+        <h3>Social Login</h3>
+
+        <p>Login with Google, Facebook or Twitter accounts</p>
+    </section>
+
+    <section>
+        <img src="social.png"/>
+    </section>
+
+    <section>
+        <h3>Role-based Authz</h3>
+
+        <p>Including grants for clients</p>
+    </section>
+
+    <section>
+        <h3>Adapters</h3>
+
+        <p>WildFly and EAP</p>
+
+        <p>HTML5 and Mobile coming soon!</p>
+    </section>
+</section>
+
+<section>
+    <section>
+        <h2>Model</h2>
 
         <img src="overview.png"/>
     </section>
+
     <section>
-        <h2>Realms</h2>
+        <h3>Realms</h3>
 
         <ul>
             <li>Config</li>
             <li>Realm Roles</li>
         </ul>
     </section>
+
     <section>
-        <h2>Application</h2>
+        <h3>Applications</h3>
 
         <ul>
             <li>Redirect URIs</li>
@@ -100,8 +164,9 @@
             <li>Scope</li>
         </ul>
     </section>
+
     <section>
-        <h2>Clients</h2>
+        <h3>Clients</h3>
 
         <ul>
             <li>Redirect URIs</li>
@@ -109,8 +174,9 @@
             <li>Scope</li>
         </ul>
     </section>
+
     <section>
-        <h2>Users</h2>
+        <h3>Users</h3>
 
         <ul>
             <li>Profile</li>
@@ -122,16 +188,15 @@
 
 <section>
     <section>
-        <h2>App Login</h2>
+        <h2>Protocol</h2>
 
-        <p>Rest and redirects!</p>
-
-        <p>
-            <small>OAuth2</small>
-        </p>
+        <p>OAuth2</p>
     </section>
     <section>
         <img src="how-1.png"/>
+    </section>
+    <section>
+        <img src="login.png"/>
     </section>
     <section>
         <img src="how-2.png"/>
@@ -140,23 +205,33 @@
         <img src="how-3.png"/>
     </section>
     <section>
-        <h3>Token contains details about the user and permissions</h3>
+        <h2>Token</h2>
 
-        <p><small>JSON Web Token (JWT) & JSON Web Signature (JWS)</small></p>
+        <p>JSON Web Token (JWT) & JSON Web Signature (JWS)</p>
+    </section>
+    <section>
+        <h3>Contents</h3>
+
+        <p>Subject, expiration, access, etc.</p>
+    </section>
+    <section>
+        <h3>Signature</h3>
+
+        <p>Token is signed so can be verified locally</p>
     </section>
     <section>
         <img src="how-4.png"/>
     </section>
     <section>
-        <h3>Token is signed so can be verified locally</h3>
-    </section>
-</section>
+        <h3>Password hidden</h3>
 
-<section>
+        <p>Neither the app or service has access to the users credentials!</p>
+    </section>
+
     <section>
         <h2>Client Grants</h2>
 
-        <p>Can request access to a resource on behalf of a user</p>
+        <p>Clients can request access to resources on behalf of users</p>
     </section>
     <section>
         <img src="grants-1.png"/>
@@ -167,69 +242,10 @@
     <section>
         <img src="grants-3.png"/>
     </section>
-    <section>
-        <h3>App exchanges code for token...</h3>
-    </section>
 </section>
 
 <section>
-    <section>
-        <h2>Admin Console</h2>
-
-        <p>Centralized management console</p>
-    </section>
-    <section>
-        <img src="admin-console.png"/>
-    </section>
-</section>
-
-<section>
-    <section>
-        <h2>Login Forms</h2>
-        <ul>
-            <li>Login</li>
-            <li>Registration</li>
-            <li>Account workflows</li>
-        </ul>
-    </section>
-    <section>
-        <img src="login-1.png"/>
-    </section>
-    <section>
-        <img src="login-2.png"/>
-    </section>
-</section>
-
-<section>
-    <section>
-        <h2>Account Management</h2>
-        <ul>
-            <li>Profile</li>
-            <li>Password</li>
-            <li>Multi-factor</li>
-        </ul>
-    </section>
-    <section>
-        <img src="account-management.png"/>
-    </section>
-</section>
-
-<section>
-    <section>
-        <h2>Social</h2>
-
-        <p>Users can login with their social accounts</p>
-    </section>
-    <section>
-        <img src="social.png"/>
-    </section>
-</section>
-
-<section>
-        <h2>Adapters</h2>
-
-        <p>Adapters for WildFly, EAP and AS7</p>
-        <p><small>More to come in the future!</small></p>
+    <h1><a href="demo.html" target="_blank">Demo time?</a></h1>
 </section>
 
 <section>
@@ -238,17 +254,9 @@
         <ul>
             <li>Audit</li>
             <li>WildFly integration</li>
-            <li>Theme support</li>
-            <li>User created clients</li>
-            <li>User Federation</li>
-            <li>Auth Brokering</li>
+            <li>Federation and brokering</li>
             <li>OpenID Connect</li>
             <li>SAML</li>
-            <li>More OAuth2 (refresh, implicit?)</li>
-            <li>More adapters (HTML5, Android, iOS, Native)</li>
-            <li>More social providers (GitHub, LinkedIn, ...)</li>
-            <li>More multi-factor (YubiKey, Email, SMS, ...)</li>
-            <li>More stores (NoSQL, files)</li>
             <li>...</li>
         </ul>
     </section>
@@ -256,7 +264,7 @@
 
 <section>
     <section>
-        <h1><a href="http://www.keycloak.org">keycloak.org</a></h1>
+        <h1><a href="http://www.keycloak.org" target="_blank">keycloak.org</a></h1>
 
         <h3>Alpha just released!</h3>
 
@@ -264,11 +272,6 @@
             <small>#keycloak & mailing lists</small>
         </p>
     </section>
-</section>
-
-
-<section>
-    <h1><a href="demo.html">Demo time?</a></h1>
 </section>
 
 <section>

@@ -31,71 +31,126 @@
     <!--[if lt IE 9]>
     <script src="lib/js/html5shiv.js"></script>
     <![endif]-->
+
+    <script src="angular.js"></script>
+    <script src="script.js"></script>
 </head>
 
-<body>
+<body data-ng-app="demo" data-ng-controller="DemoCtrl">
+
+<div id="menu">
+    <button class="small" data-ng-click="login()" data-ng-show="keycloakConfig && !token">Log In</button>
+    <button class="small" data-ng-click="logout()" data-ng-show="token">Log Out</button>
+
+    <button class="small" data-ng-click="showConfig = !showConfig">Config</button>
+</div>
+
+<div id="config" data-ng-show="showConfig">
+    <textarea id="keycloak-config" data-ng-model="keycloakConfigJson" rows="20" cols="100"></textarea><br/>
+    <button class="small" data-ng-click="showConfig = !showConfig">^</button>
+    {{keycloakConfigStatus}}
+</div>
 
 <div class="reveal">
     <div class="slides">
         <section>
-            <h1>Keycloak Demo</h1>
-
-            <p>
-                <small>Stian Thorgersen / stian@redhat.com</small>
-            </p>
-        </section>
-
-        <section>
-            <h2>Configure Keycloak</h2>
-
-            <ol>
-                <li>Create Realm</li>
-                <li>Create App</li>
-                <li>Create Roles</li>
-                <li>Create User</li>
-            </ol>
-        </section>
-
-        <section>
-            <h2>Configure App</h2>
-
-            <ol>
-                <li>Get config</li>
-                <li>Add to app</li>
-            </ol>
-
-            <p></p>
-
-            <p><textarea id="keycloak-config" onchange="configChanged()" rows="10" cols="100"></textarea><br/>
-                <small id="keycloak-config-status">not configured</small>
-            </p>
-
+            <img src="keycloak-demo-logo.png"/>
+            <p>Stian Thorgersen / stian@redhat.com</p>
         </section>
 
         <section>
             <section>
-                <p id="auth-status">
-                    <button class="big" onclick="login()">Log In</button>
-                </p>
+                <h2>Configure Keycloak</h2>
+                <ol>
+                    <li><a href="{{keycloakServer}}/auth/admin/index.html#/realms" target="_blank">Create Realm ></a>
+                    </li>
+                    <li><a href="{{keycloakServer}}/auth/admin/index.html#/realms/demo-realm/applications"
+                           target="_blank">Create App ></a></li>
+                    <li><a href="{{keycloakServer}}/auth/admin/index.html#/realms/demo-realm/roles" target="_blank">Create
+                        Roles ></a></li>
+                    <li><a href="{{keycloakServer}}/auth/admin/index.html#/realms/demo-realm/users" target="_blank">Create
+                        User ></a></li>
+                </ol>
             </section>
+
             <section>
-                <p>
-                    <button class="big" onclick="logout()">Log Out</button>
-                </p>
-                <p>
-                    <button class="big" onclick="reset()">Reset</button>
-                </p>
+                <h3>Keycloak URL</h3>
+                <input data-ng-model="keycloakServer">
             </section>
         </section>
 
         <section>
-            <h1>That's all folks!</h1>
+            <button class="big" data-ng-click="showConfig = !showConfig">Config App</button>
+            <p><a href="{{keycloakServer}}/auth/admin/index.html#/realms/demo-realm/applications" target="_blank">Get
+                Config ></a></p>
+        </section>
 
-            <h3>Any questions?</h3>
+        <section>
+            <button class="big" data-ng-click="login(slide + 1)" data-ng-show="keycloakConfig">Log In</button>
+        </section>
 
-            <p>
-                <small>Stian Thorgersen / stian@redhat.com</small>
-            </p>
+        <section>
+            <h2>Token</h2>
+
+            <pre data-ng-show="token">{{token | json}}</pre>
+            <p data-ng-hide="token">Not logged in</p>
+        </section>
+
+        <section>
+            <h2>Client</h2>
+            <ul>
+                <li><a href="{{keycloakServer}}/auth/admin/index.html#/realms/demo-realm/applications" target="_blank">Create
+                    Client</a></li>
+                <li><a data-ng-click="showConfig = !showConfig">Configure App</a></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Registration</h2>
+            <ul>
+                <li><a href="{{keycloakServer}}/auth/admin/index.html#/realms/demo-realm" target="_blank">Enable
+                    Registration</a></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Account Workflows</h2>
+
+            <ul>
+                <li><a href="{{keycloakServer}}/auth/admin/index.html#/realms/demo-realm/users" target="_blank">Add
+                    Required Action</a></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Social Login</h2>
+
+            <ul>
+                <li><a href="{{keycloakServer}}/auth/admin/index.html#/realms/demo-realm" target="_blank">Enable
+                    Social</a></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Multi-Factor Authentication</h2>
+
+            <ul>
+                <li><a href="{{keycloakServer}}/auth/admin/index.html#/realms/demo-realm" target="_blank">Set
+                    Multi-Factor Required</a></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Account Management</h2>
+
+            <ul>
+                <li><a href="{{keycloakServer}}/auth/admin/index.html#/realms/demo-realm" target="_blank">Enable Account
+                    Management</a></li>
+                <li><a href="{{keycloakServer}}/auth/admin/index.html#/realms/demo-realm/users" target="_blank">Grant
+                    User Access</a></li>
+                <li><a href="{{keycloakServer}}/auth/rest/realms/demo-realm/account" target="_blank">Account
+                    Management</a></li>
+            </ul>
         </section>
     </div>
 </div>
@@ -103,6 +158,14 @@
 <script>
     window.oauth = (function () {
         var oauth = {};
+        var config;
+
+        if (sessionStorage.keycloakConfig) {
+            try {
+                config = JSON.parse(sessionStorage.keycloakConfig)
+            } catch (err) {
+            }
+        }
 
         var params = window.location.search.substring(1).split('&');
         for (var i = 0; i < params.length; i++) {
@@ -145,59 +208,38 @@
                 }
             }
 
+            var params = 'code=' + oauth.code + '&client_id=' + encodeURIComponent(config['resource']) + '&password=' + encodeURIComponent(config['credentials'].password);
+            var url = config['code-url'];
+
+            var req = new XMLHttpRequest();
+            req.open('POST', url, false);
+            req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+            req.send(params);
+
+            if (req.status == 200) {
+                var token = JSON.parse(req.responseText)['access_token'];
+                token = JSON.parse(atob(token.split('.')[1]));
+
+                delete token.jti;
+                delete token.exp;
+                delete token.nbf;
+                delete token.iat;
+                delete token['allowed-origins'];
+                for (var i in token['resource_access']) {
+                    delete token['resource_access'][i]['verify_caller'];
+                }
+
+                oauth.token = token;
+            } else {
+                oauth.error = req.statusText;
+            }
+
             window.history.replaceState({}, null, location.protocol + '//' + location.host + location.pathname + (oauth.fragment ? oauth.fragment : ''));
         }
 
         return oauth;
     }());
 
-    if (window.oauth.code) {
-        document.getElementById('auth-status').innerHTML = '<p>Received authz code</p><button class="big" onclick="getToken()">Get Token</button>';
-    }
-
-    var keycloakConfig;
-
-    if (sessionStorage.keycloakConfig) {
-        document.getElementById('keycloak-config').value = sessionStorage.keycloakConfig;
-        configChanged();
-    }
-
-    function configChanged() {
-        try {
-            var config = document.getElementById('keycloak-config').value;
-            if (config) {
-                sessionStorage.keycloakConfig = config;
-                keycloakConfig = JSON.parse(sessionStorage.keycloakConfig);
-
-                if (!keycloakConfig.realm || !keycloakConfig.resource) {
-                    throw 'invalid config';
-                }
-
-                if (keycloakConfig.credentials.password == 'INSERT APPLICATION PASSWORD' || keycloakConfig.credentials.password == 'INSERT CLIENT PASSWORD') {
-                    throw 'password not set';
-                }
-
-                document.getElementById('keycloak-config-status').innerHTML = 'configured';
-            }
-        } catch (err) {
-            document.getElementById('keycloak-config-status').innerHTML = 'invalid config: ' + err;
-            delete sessionStorage.keycloakConfig;
-        }
-    }
-
-    function login() {
-        var redirect = location.href.split('?')[0].split('#')[0];
-        var state = '#' + btoa('hash=' + location.hash);
-
-        sessionStorage.oauthState = state;
-
-        var url = keycloakConfig['auth-url'];
-        url += '?client_id=' + keycloakConfig['resource'];
-        url += '&redirect_uri=' + encodeURIComponent(redirect);
-        url += '&state=' + encodeURIComponent(state);
-
-        document.location = url;
-    }
 
     function reset() {
         delete sessionStorage.keycloakConfig;
@@ -237,8 +279,6 @@
         } else {
             document.getElementById('auth-status').innerHTML = '<p>Failed to obtain token</p><pre>' + req.statusText + '</pre>';
         }
-
-        Reveal.slide(3);
     }
 
 </script>
