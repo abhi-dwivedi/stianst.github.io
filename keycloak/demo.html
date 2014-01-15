@@ -40,6 +40,7 @@
 
 <div id="menu">
     <button class="small" data-ng-click="login()" data-ng-show="keycloakConfig && !token">Log In</button>
+    <button class="small" data-ng-click="login()" data-ng-show="token">Refresh Log In</button>
     <button class="small" data-ng-click="logout()" data-ng-show="token">Log Out</button>
 
     <button class="small" data-ng-click="showConfig = !showConfig">Config</button>
@@ -47,8 +48,9 @@
 
 <div id="config" data-ng-show="showConfig">
     <textarea id="keycloak-config" data-ng-model="keycloakConfigJson" rows="20" cols="100"></textarea><br/>
-    <button class="small" data-ng-click="showConfig = !showConfig">^</button>
-    {{keycloakConfigStatus}}
+    <div id="keycloak-config-controls">
+        {{keycloakConfigStatus}}
+    </div>
 </div>
 
 <div class="reveal">
@@ -69,20 +71,20 @@
         <section>
             <h2>Configure Keycloak</h2>
             <ol>
-                <li><a href="{{keycloakServer}}/auth/admin/index.html#/realms" target="_blank">Create Realm ></a>
+                <li><a href="{{keycloakServer}}/auth/admin/index.html#/realms" target="_blank">Create Realm</a>
                 </li>
-                <li><a href="{{keycloakServer}}/auth/admin/index.html#/realms/demo-realm/applications"
-                       target="_blank">Create App ></a></li>
-                <li><a href="{{keycloakServer}}/auth/admin/index.html#/realms/demo-realm/roles" target="_blank">Create
-                    Roles ></a></li>
-                <li><a href="{{keycloakServer}}/auth/admin/index.html#/realms/demo-realm/users" target="_blank">Create
-                    User ></a></li>
+                <li><a href="{{keycloakServer}}/auth/admin/index.html#/realms/Demo%20Realm/applications"
+                       target="_blank">Create App</a></li>
+                <li><a href="{{keycloakServer}}/auth/admin/index.html#/realms/Demo%20Realm/roles" target="_blank">Create
+                    Roles</a></li>
+                <li><a href="{{keycloakServer}}/auth/admin/index.html#/realms/Demo%20Realm/users" target="_blank">Create
+                    User</a></li>
             </ol>
         </section>
 
         <section>
             <button class="big" data-ng-click="showConfig = !showConfig">Config App</button>
-            <p><a href="{{keycloakServer}}/auth/admin/index.html#/realms/demo-realm/applications" target="_blank">Get
+            <p><a href="{{keycloakServer}}/auth/admin/index.html#/realms/Demo%20Realm/applications" target="_blank">Get
                 Config ></a></p>
         </section>
 
@@ -100,7 +102,7 @@
         <section>
             <h2>Client</h2>
             <ul>
-                <li><a href="{{keycloakServer}}/auth/admin/index.html#/realms/demo-realm/applications" target="_blank">Create
+                <li><a href="{{keycloakServer}}/auth/admin/index.html#/realms/Demo%20Realm/applications" target="_blank">Create
                     Client</a></li>
                 <li><a data-ng-click="showConfig = !showConfig">Configure App</a></li>
             </ul>
@@ -118,7 +120,7 @@
             <h2>Account Workflows</h2>
 
             <ul>
-                <li><a href="{{keycloakServer}}/auth/admin/index.html#/realms/demo-realm/users" target="_blank">Add
+                <li><a href="{{keycloakServer}}/auth/admin/index.html#/realms/Demo%20Realm/users" target="_blank">Add
                     Required Action</a></li>
             </ul>
         </section>
@@ -127,7 +129,7 @@
             <h2>Social Login</h2>
 
             <ul>
-                <li><a href="{{keycloakServer}}/auth/admin/index.html#/realms/demo-realm" target="_blank">Enable
+                <li><a href="{{keycloakServer}}/auth/admin/index.html#/realms/Demo%20Realm" target="_blank">Enable
                     Social</a></li>
             </ul>
         </section>
@@ -136,7 +138,7 @@
             <h2>Multi-Factor Authentication</h2>
 
             <ul>
-                <li><a href="{{keycloakServer}}/auth/admin/index.html#/realms/demo-realm" target="_blank">Set
+                <li><a href="{{keycloakServer}}/auth/admin/index.html#/realms/Demo%20Realm" target="_blank">Set
                     Multi-Factor Required</a></li>
             </ul>
         </section>
@@ -145,11 +147,11 @@
             <h2>Account Management</h2>
 
             <ul>
-                <li><a href="{{keycloakServer}}/auth/admin/index.html#/realms/demo-realm" target="_blank">Enable Account
+                <li><a href="{{keycloakServer}}/auth/admin/index.html#/realms/Demo%20Realm" target="_blank">Enable Account
                     Management</a></li>
-                <li><a href="{{keycloakServer}}/auth/admin/index.html#/realms/demo-realm/users" target="_blank">Grant
+                <li><a href="{{keycloakServer}}/auth/admin/index.html#/realms/Demo%20Realm/users" target="_blank">Grant
                     User Access</a></li>
-                <li><a href="{{keycloakServer}}/auth/rest/realms/demo-realm/account" target="_blank">Account
+                <li><a href="{{keycloakServer}}/auth/rest/realms/Demo%20Realm/account" target="_blank">Account
                     Management</a></li>
             </ul>
         </section>
@@ -241,6 +243,10 @@
         return oauth;
     }());
 
+    if (sessionStorage.logoutFragment) {
+        location.hash = sessionStorage.logoutFragment;
+        delete sessionStorage.logoutFragment;
+    }
 
     function reset() {
         delete sessionStorage.keycloakConfig;

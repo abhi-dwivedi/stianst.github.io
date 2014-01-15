@@ -195,7 +195,7 @@ pre {
 }
 
 div#config textarea {
-    background-color: black;
+    background-color: rgba(0,0,0,.8);
     box-shadow: 0 0 6px rgba(0,0,0,.3);
     border: none;
     border-radius: 0.5em;
@@ -205,6 +205,16 @@ div#config textarea {
     font-family: monospace;
     line-height: 1.2em;
     resize: none;
+}
+
+div#keycloak-config-controls {
+    background-color: rgba(255,255,255,.8);
+    box-shadow: 0 0 6px rgba(0,0,0,.3);
+    border: none;
+    border-radius: 0.5em;
+    padding: 5px 10px 8px 10px;
+    color: black;
+    font-size: 1.2em;
 }
 
 input {

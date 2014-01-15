@@ -65,5 +65,6 @@ demo.controller('DemoCtrl', function ($scope, $location) {
         var url = $scope.keycloakConfig['auth-url'].replace('login', 'logout');
         url += '?redirect_uri=' + encodeURIComponent(location.href);
         document.location = url;
+        sessionStorage.logoutFragment = '/' + $scope.slide;
     }
 });
