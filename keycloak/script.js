@@ -48,7 +48,7 @@ demo.controller('DemoCtrl', function ($scope, $location) {
 
         sessionStorage.oauthState = state;
 
-        var url = $scope.keycloakConfig['auth-url'];
+        var url = $scope.keycloakConfig['auth-server-url'] + '/rest/realms/' +  encodeURIComponent($scope.keycloakConfig['realm'])  + '/tokens/login';
         url += '?client_id=' + $scope.keycloakConfig['resource'];
         url += '&redirect_uri=' + encodeURIComponent(redirect);
         url += '&state=' + encodeURIComponent(state);
@@ -62,7 +62,7 @@ demo.controller('DemoCtrl', function ($scope, $location) {
     }
 
     $scope.logout = function () {
-        var url = $scope.keycloakConfig['auth-url'].replace('login', 'logout');
+        var url = $scope.keycloakConfig['auth-server-url'] + '/rest/realms/' +  encodeURIComponent($scope.keycloakConfig['realm'])  + '/tokens/logout';
         url += '?redirect_uri=' + encodeURIComponent(location.href);
         document.location = url;
         sessionStorage.logoutFragment = '/' + $scope.slide;

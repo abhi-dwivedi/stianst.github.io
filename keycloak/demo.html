@@ -73,19 +73,19 @@
             <ol>
                 <li><a href="{{keycloakServer}}/auth/admin/index.html#/realms" target="_blank">Create Realm</a>
                 </li>
-                <li><a href="{{keycloakServer}}/auth/admin/index.html#/realms/Demo%20Realm/applications"
+                <li><a href="{{keycloakServer}}/auth/admin/index.html#/realms/demo-realm/applications"
                        target="_blank">Create App</a></li>
-                <li><a href="{{keycloakServer}}/auth/admin/index.html#/realms/Demo%20Realm/roles" target="_blank">Create
+                <li><a href="{{keycloakServer}}/auth/admin/index.html#/realms/demo-realm/roles" target="_blank">Create
                     Roles</a></li>
-                <li><a href="{{keycloakServer}}/auth/admin/index.html#/realms/Demo%20Realm/users" target="_blank">Create
+                <li><a href="{{keycloakServer}}/auth/admin/index.html#/realms/demo-realm/users" target="_blank">Create
                     User</a></li>
             </ol>
         </section>
 
         <section>
             <button class="big" data-ng-click="showConfig = !showConfig">Config App</button>
-            <p><a href="{{keycloakServer}}/auth/admin/index.html#/realms/Demo%20Realm/applications" target="_blank">Get
-                Config ></a></p>
+            <p><a href="{{keycloakServer}}/auth/admin/index.html#/realms/demo-realm/applications" target="_blank">Get
+                Config</a></p>
         </section>
 
         <section>
@@ -102,7 +102,7 @@
         <section>
             <h2>Client</h2>
             <ul>
-                <li><a href="{{keycloakServer}}/auth/admin/index.html#/realms/Demo%20Realm/applications" target="_blank">Create
+                <li><a href="{{keycloakServer}}/auth/admin/index.html#/realms/demo-realm/oauth-clients" target="_blank">Create
                     Client</a></li>
                 <li><a data-ng-click="showConfig = !showConfig">Configure App</a></li>
             </ul>
@@ -120,7 +120,7 @@
             <h2>Account Workflows</h2>
 
             <ul>
-                <li><a href="{{keycloakServer}}/auth/admin/index.html#/realms/Demo%20Realm/users" target="_blank">Add
+                <li><a href="{{keycloakServer}}/auth/admin/index.html#/realms/demo-realm/users" target="_blank">Add
                     Required Action</a></li>
             </ul>
         </section>
@@ -129,7 +129,7 @@
             <h2>Social Login</h2>
 
             <ul>
-                <li><a href="{{keycloakServer}}/auth/admin/index.html#/realms/Demo%20Realm" target="_blank">Enable
+                <li><a href="{{keycloakServer}}/auth/admin/index.html#/realms/demo-realm" target="_blank">Enable
                     Social</a></li>
             </ul>
         </section>
@@ -138,7 +138,7 @@
             <h2>Multi-Factor Authentication</h2>
 
             <ul>
-                <li><a href="{{keycloakServer}}/auth/admin/index.html#/realms/Demo%20Realm" target="_blank">Set
+                <li><a href="{{keycloakServer}}/auth/admin/index.html#/realms/demo-realm" target="_blank">Set
                     Multi-Factor Required</a></li>
             </ul>
         </section>
@@ -147,11 +147,11 @@
             <h2>Account Management</h2>
 
             <ul>
-                <li><a href="{{keycloakServer}}/auth/admin/index.html#/realms/Demo%20Realm" target="_blank">Enable Account
+                <li><a href="{{keycloakServer}}/auth/admin/index.html#/realms/demo-realm" target="_blank">Enable Account
                     Management</a></li>
-                <li><a href="{{keycloakServer}}/auth/admin/index.html#/realms/Demo%20Realm/users" target="_blank">Grant
+                <li><a href="{{keycloakServer}}/auth/admin/index.html#/realms/demo-realm/users" target="_blank">Grant
                     User Access</a></li>
-                <li><a href="{{keycloakServer}}/auth/rest/realms/Demo%20Realm/account" target="_blank">Account
+                <li><a href="{{keycloakServer}}/auth/rest/realms/demo-realm/account" target="_blank">Account
                     Management</a></li>
             </ul>
         </section>
@@ -212,7 +212,7 @@
             }
 
             var params = 'code=' + oauth.code + '&client_id=' + encodeURIComponent(config['resource']) + '&password=' + encodeURIComponent(config['credentials'].password);
-            var url = config['code-url'];
+            var url = config['auth-server-url'] + '/rest/realms/' +  encodeURIComponent(config['realm'])  + '/tokens/access/codes/';
 
             var req = new XMLHttpRequest();
             req.open('POST', url, false);
