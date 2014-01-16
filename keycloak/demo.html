@@ -90,6 +90,7 @@
 
         <section>
             <button class="big" data-ng-click="login(slide + 1)" data-ng-show="keycloakConfig">Log In</button>
+            <p data-ng-hide="keycloakConfig">{{keycloakConfigStatus}}</p>
         </section>
 
         <section>
