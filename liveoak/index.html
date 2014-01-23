@@ -107,6 +107,7 @@
 
                 <div class="fragment">
                     <img src="images/arrown-down.svg"/>
+
                     <p>Easy</p>
                 </div>
             </section>
@@ -118,6 +119,7 @@
 
                 <div class="fragment">
                     <img src="images/arrown-down.svg"/>
+
                     <p>Medium</p>
                 </div>
             </section>
@@ -129,6 +131,7 @@
 
                 <div class="fragment">
                     <img src="images/arrown-down.svg"/>
+
                     <p>Harder</p>
                 </div>
             </section>
@@ -138,16 +141,19 @@
 
                 <div class="space-top col-3">
                     <h3>Core</h3>
+
                     <p>Keycloak core<br/>without JAX-RS</p>
                 </div>
 
                 <div class="space-top col-3">
                     <h3>JAX-RS</h3>
+
                     <p>LiveOak wrapper<br/>for JAX-RS</p>
                 </div>
 
                 <div class="space-top col-3">
                     <h3>RestEasy</h3>
+
                     <p>RestEasy has Netty integration</p>
                 </div>
 
@@ -159,11 +165,35 @@
             </section>
         </section>
 
-
         <section>
             <h1>Authz</h1>
 
             <p>Powered by Policies</p>
+        </section>
+
+        <section>
+            <section>
+                <h2>Authz Service</h2>
+
+                <p>Delegates decision to one or more policies</p>
+            </section>
+            <section>
+                <p>Policies are invoked over REST (async)</p>
+                <p>A policy can include/exclude specific resources</p>
+            </section>
+            <section>
+                <h2>Policy Decisions</h2>
+
+                <div class="space-top col-3"><h3>Accept</h3></div>
+                <div class="space-top col-3"><h3>Reject</h3></div>
+                <div class="space-top col-3"><h3>Ignore</h3></div>
+
+                <div class="clearfix"></div>
+
+                <div class="space-top">
+                    <p>Accepted if at least one accept and no rejects</p>
+                </div>
+            </section>
         </section>
 
 
