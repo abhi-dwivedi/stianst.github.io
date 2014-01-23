@@ -26,10 +26,10 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.70710678"
-     inkscape:cx="541.90733"
+     inkscape:cx="373.61592"
      inkscape:cy="460.13513"
      inkscape:document-units="px"
-     inkscape:current-layer="layer2"
+     inkscape:current-layer="g5019"
      showgrid="false"
      inkscape:window-width="2048"
      inkscape:window-height="1128"
@@ -281,7 +281,7 @@
            xml:space="preserve"
            style="font-size:14px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans"
            x="154.67648"
-           y="200.25674"
+           y="179.92273"
            id="text3795"
            sodipodi:linespacing="125%"
            inkscape:export-filename="/home/st/Documents/Work/keycloak-presentation/grants-1.png"
@@ -290,8 +290,13 @@
              sodipodi:role="line"
              id="tspan3797"
              x="154.67648"
-             y="200.25674"
-             style="font-size:32px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Medium">Keycloak</tspan></text>
+             y="179.92273"
+             style="font-size:32px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Medium">Auth</tspan><tspan
+             sodipodi:role="line"
+             x="154.67648"
+             y="219.92273"
+             style="font-size:32px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Medium"
+             id="tspan3266">Service</tspan></text>
       </g>
     </g>
     <g
@@ -411,7 +416,7 @@
              sodipodi:role="line"
              x="154.67648"
              y="219.92273"
-             style="font-size:32px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Medium">Policy</tspan></text>
+             style="font-size:32px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Medium">Policies</tspan></text>
       </g>
     </g>
     <g

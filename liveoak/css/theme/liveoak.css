@@ -227,3 +227,21 @@ input {
     font-size: 1em;
     font-family: monospace;
 }
+
+.space-top {
+    margin-top: 1em !important;
+}
+
+.col-2 {
+    float: left;
+    width: 50%;
+}
+
+.col-3 {
+    float: left;
+    width: 33%;
+}
+
+.clearfix {
+    clear: both;
+}

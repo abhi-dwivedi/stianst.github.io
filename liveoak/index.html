@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="css/reveal.css">
     <link rel="stylesheet" href="css/theme/liveoak.css" id="theme">
 
-    <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu|Ubuntu+Condensed' rel='stylesheet'
+    <link href='fonts/fonts.css' rel='stylesheet'
           type='text/css'>
 
     <!-- For syntax highlighting -->
@@ -36,71 +36,174 @@
 <body>
 
 <div class="reveal">
-<div class="slides">
+    <div class="slides">
 
-<section>
-    <h1>LiveOak Security</h1>
-</section>
+        <section>
+            <h1>LiveOak Security</h1>
+        </section>
 
-<section>
-    <h2>Overview</h2>
-    <img src="images/overview.svg"/>
-</section>
+        <section>
+            <h2>Overview</h2>
+            <img src="images/overview.svg"/>
+        </section>
 
-    <section>
-        <h2>Keycloak Model</h2>
-        <img src="images/keycloak-model.svg"/>
-    </section>
+        <section>
+            <h1>Auth</h1>
 
-<section>
-    <h2>Auth</h2>
-    <p>Powered by Keycloak</p>
-</section>
+            <p>Powered by Keycloak</p>
+        </section>
 
-<script src="lib/js/head.min.js"></script>
-<script src="js/reveal.min.js"></script>
+        <section>
+            <h2>Model</h2>
+            <img src="images/keycloak-model.svg"/>
+        </section>
 
-<script>
+        <section>
+            <section>
+                <h2>Integration</h2>
 
-    // Full list of configuration options available here:
-    // https://github.com/hakimel/reveal.js#configuration
-    Reveal.initialize({
-        controls: true,
-        progress: true,
-        history: true,
-        center: true,
+                <p>Store and Endpoints</p>
 
-        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+                <img src="images/arrown-down.svg"/>
 
-        // Parallax scrolling
-        // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
-        // parallaxBackgroundSize: '2100px 900px',
+                <p>JPA/H2 and RestEasy</p>
 
-        // Optional libraries used to extend on reveal.js
-        dependencies: [
-            { src: 'lib/js/classList.js', condition: function () {
-                return !document.body.classList;
-            } },
-            { src: 'plugin/markdown/marked.js', condition: function () {
-                return !!document.querySelector('[data-markdown]');
-            } },
-            { src: 'plugin/markdown/markdown.js', condition: function () {
-                return !!document.querySelector('[data-markdown]');
-            } },
-            { src: 'plugin/highlight/highlight.js', async: true, callback: function () {
-                hljs.initHighlightingOnLoad();
-            } },
-            { src: 'plugin/zoom-js/zoom.js', async: true, condition: function () {
-                return !!document.body.classList;
-            } },
-            { src: 'plugin/notes/notes.js', async: true, condition: function () {
-                return !!document.body.classList;
-            } }
-        ]
-    });
+                <div class="fragment">
+                    <img src="images/arrown-down.svg"/>
 
-</script>
+                    <p>Mongo and Resources</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Store</h2>
+
+                <div class="space-top col-3"><p>Model SPI</p></div>
+                <div class="space-top col-3"><p>We already have<br/> the basics</p></div>
+                <div class="space-top col-3"><p>Doesn't depend<br/>on JAX-RS</p></div>
+            </section>
+
+            <section>
+                <h2>Endpoints</h2>
+
+                <div class="space-top col-3">
+                    <h3>OAuth</h3>
+
+                    <p>Hard</p></div>
+                <div class="space-top col-3">
+                    <h3>Account</h3>
+
+                    <p>Medium</p></div>
+                <div class="space-top col-3">
+                    <h3>Config</h3>
+
+                    <p>Easy</p></div>
+            </section>
+
+            <section>
+                <h2>Admin</h2>
+
+                <p>JAX-RS endpoints pretty much just wraps model</p>
+
+                <div class="fragment">
+                    <img src="images/arrown-down.svg"/>
+                    <p>Easy</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Account</h2>
+
+                <p>Would need a bit of refactoring</p>
+
+                <div class="fragment">
+                    <img src="images/arrown-down.svg"/>
+                    <p>Medium</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>OAuth</h2>
+
+                <p>Depends a fair amount on JAX-RS</p>
+
+                <div class="fragment">
+                    <img src="images/arrown-down.svg"/>
+                    <p>Harder</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Alternatives</h2>
+
+                <div class="space-top col-3">
+                    <h3>Core</h3>
+                    <p>Keycloak core<br/>without JAX-RS</p>
+                </div>
+
+                <div class="space-top col-3">
+                    <h3>JAX-RS</h3>
+                    <p>LiveOak wrapper<br/>for JAX-RS</p>
+                </div>
+
+                <div class="space-top col-3">
+                    <h3>RestEasy</h3>
+                    <p>RestEasy has Netty integration</p>
+                </div>
+
+                <div class="clearfix"></div>
+
+                <div class="space-top fragment">
+                    <p>Or a combination?</p>
+                </div>
+            </section>
+        </section>
+
+
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.min.js"></script>
+
+        <script>
+
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+
+                theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+                // Parallax scrolling
+                // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+                // parallaxBackgroundSize: '2100px 900px',
+
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                    { src: 'lib/js/classList.js', condition: function () {
+                        return !document.body.classList;
+                    } },
+                    { src: 'plugin/markdown/marked.js', condition: function () {
+                        return !!document.querySelector('[data-markdown]');
+                    } },
+                    { src: 'plugin/markdown/markdown.js', condition: function () {
+                        return !!document.querySelector('[data-markdown]');
+                    } },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function () {
+                        hljs.initHighlightingOnLoad();
+                    } },
+                    { src: 'plugin/zoom-js/zoom.js', async: true, condition: function () {
+                        return !!document.body.classList;
+                    } },
+                    { src: 'plugin/notes/notes.js', async: true, condition: function () {
+                        return !!document.body.classList;
+                    } }
+                ]
+            });
+
+        </script>
 
 </body>
 </html>
