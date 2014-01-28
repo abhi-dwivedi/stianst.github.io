@@ -168,7 +168,9 @@
         <section>
             <h1>Authz</h1>
 
-            <p>Powered by Policies</p>
+            <p>Authz decisions by authz service and policies</p>
+
+            <p>Not hard-coded into resources/services</p>
         </section>
 
         <section>
@@ -178,21 +180,51 @@
                 <p>Delegates decision to one or more policies</p>
             </section>
             <section>
-                <p>Policies are invoked over REST (async)</p>
-                <p>A policy can include/exclude specific resources</p>
+                <img src="images/authz.svg"/>
             </section>
             <section>
-                <h2>Policy Decisions</h2>
+                <p>A policy can include/exclude resources</p>
 
-                <div class="space-top col-3"><h3>Accept</h3></div>
-                <div class="space-top col-3"><h3>Reject</h3></div>
-                <div class="space-top col-3"><h3>Ignore</h3></div>
+                <p>May add more options, but for now we're keeping it simple</p>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h2>Default Policies</h2>
+
+                <p>Built-in policies should cover at least 80% use-cases</p>
+            </section>
+
+            <section>
+                <h2>URI Policy</h2>
+
+                <div class="col-3 space-top"><h3>URI</h3></div>
+                <div class="col-3 space-top"><h3>Roles</h3></div>
+                <div class="col-3 space-top"><h3>Operations</h3></div>
+            </section>
+
+            <section>
+                <h2>Share Policy</h2>
+
+                <div class="col-2 space-top"><h3>Ownership</h3></div>
+                <div class="col-2 space-top"><h3>Sharing</h3></div>
 
                 <div class="clearfix"></div>
 
-                <div class="space-top">
-                    <p>Accepted if at least one accept and no rejects</p>
-                </div>
+                <div class="space-top"><p>Could be dynamic rules in URI policy</p></div>
+            </section>
+
+            <section>
+                <h2>Experimental stage</h2>
+
+                <ul>
+                    <li>Default policies?</li>
+                    <li>Add meta-data to store?</li>
+                    <li>Admins should be able to control</li>
+                    <li>Users should also be able to share</li>
+                    <li>Custom policies (business logic)</li>
+                </ul>
             </section>
         </section>
 
