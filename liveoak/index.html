@@ -197,37 +197,76 @@
             </section>
 
             <section>
-                <h2>URI Policy</h2>
-
-                <div class="col-3 space-top"><h3>URI</h3></div>
-                <div class="col-3 space-top"><h3>Roles</h3></div>
-                <div class="col-3 space-top"><h3>Operations</h3></div>
+                <h3>MADs can manage access to resouce</h3>
+                <p class="fragment">Anyone with role 'gallery-user' can upload a picture</p>
             </section>
 
             <section>
-                <h2>Share Policy</h2>
-
-                <div class="col-2 space-top"><h3>Ownership</h3></div>
-                <div class="col-2 space-top"><h3>Sharing</h3></div>
-
-                <div class="clearfix"></div>
-
-                <div class="space-top"><p>Could be dynamic rules in URI policy</p></div>
+                <h3>Ownership and sharing</h3>
+                <p class="fragment">A user can upload and delete his own pictures</p>
+                <p class="fragment">A user can also share pictures with everyone, or with specific people</p>
             </section>
 
             <section>
-                <h2>Experimental stage</h2>
+                <h2>Revisit</h2>
+                <p class="fragment">Gather requirements and use-cases</p>
+                <p class="fragment">Design for MADs</p>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h2>MAD</h2>
 
                 <ul>
-                    <li>Default policies?</li>
-                    <li>Add meta-data to store?</li>
-                    <li>Admins should be able to control</li>
-                    <li>Users should also be able to share</li>
-                    <li>Custom policies (business logic)</li>
+                    <li class="fragment">Create organization</li>
+                    <li class="fragment">Config security for organization</li>
+                    <li class="fragment">For example enable social login</li>
+                    <li class="fragment">Create theme for login forms</li>
+                </ul>
+            </section>
+            <section>
+                <ul>
+                    <li class="fragment">Create server application</li>
+                    <li class="fragment">Add roles</li>
+                    <li class="fragment">Config policies</li>
+                </ul>
+            </section>
+            <section>
+                <ul>
+                    <li class="fragment">Create client application</li>
+                    <li class="fragment">Config scole</li>
+                    <li class="fragment">Get client SDK and config</li>
+                    <li class="fragment">Update app</li>
+                </ul>
+            </section>
+            <section>
+                <ul>
+                    <li class="fragment">Manage users</li>
+                    <li class="fragment">Manage role mappings</li>
+                    <li class="fragment">View audit logs</li>
+                    <li class="fragment">Manage policies</li>
                 </ul>
             </section>
         </section>
 
+        <section>
+            <h2>Road Map</h2>
+
+            <ol>
+                <li>Auth</li>
+                <ul>
+                    <li>Theme support for forms</li>
+                    <li>Mongo store</li>
+                    <li>Stomp and websocket support</li>
+                </ul>
+                <li>Authz</li>
+                <ul>
+                    <li>Default policies</li>
+                </ul>
+                <li>Improve Keycloak integration</li>
+            </ol>
+        </section>
 
         <script src="lib/js/head.min.js"></script>
         <script src="js/reveal.min.js"></script>
