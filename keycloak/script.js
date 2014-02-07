@@ -1,7 +1,9 @@
 var demo = angular.module('demo', []);
 
 demo.controller('DemoCtrl', function ($scope) {
-    localStorage.keycloakConfig = angular.toJson($scope.keycloakConfig);
+    if (localStorage.keycloakConfig) {
+        $scope.keycloakConfig = angular.fromJson(localStorage.keycloakConfig);
+    }
 
     $scope.showConfig = false;
 
@@ -16,6 +18,10 @@ demo.controller('DemoCtrl', function ($scope) {
             return;
         }
 
+        if ($scope.keycloakConfig.url.charAt($scope.keycloakConfig.url.length - 1) == '/') {
+            $scope.keycloakConfig.url = $scope.keycloakConfig.url.substring(0, $scope.keycloakConfig.url.length - 1);
+        }
+
         if (!$scope.keycloakConfig.realm || !$scope.keycloakConfig.clientId || !$scope.keycloakConfig.clientSecret) {
             $scope.configError = 'Not configured';
             return;
@@ -24,21 +30,27 @@ demo.controller('DemoCtrl', function ($scope) {
         delete $scope.configError;
 
         $scope.keycloak = new Keycloak($scope.keycloakConfig);
-        $scope.keycloak.init(function() {
-            $scope.keycloak.loadUserProfile(function() {
-                $scope.$apply(function() {
-                });
-            });
-        }, function() {
-            $scope.$apply(function() {
+        $scope.keycloak.init(function () {
+            $scope.$apply();
+
+            $scope.keycloak.loadUserProfile(function () {
+                $scope.$apply();
+            }, function () {
+                $scope.$apply(function () {
+                    $scope.configError = 'Failed to load profile';
+                })
+            })
+
+        }, function () {
+            $scope.$apply(function () {
                 $scope.configError = 'Auth failed';
             });
         });
     }
 
     $scope.save = function () {
-        localStorage.keycloakConfig = angular.toJson($scope.keycloakConfig);
         $scope.init();
+        localStorage.keycloakConfig = angular.toJson($scope.keycloakConfig);
         $scope.showConfig = false;
     }
 
@@ -48,7 +60,7 @@ demo.controller('DemoCtrl', function ($scope) {
         $scope.keycloak.login();
     }
 
-    $scope.logout = function() {
+    $scope.logout = function () {
         $scope.keycloak.logout();
     }
 

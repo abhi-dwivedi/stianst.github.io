@@ -32,6 +32,7 @@
     <button class="small" data-ng-click="login()" data-ng-hide="keycloak.authenticated">Log In</button>
     <button class="small" data-ng-click="login()" data-ng-show="keycloak.authenticated">Refresh Log In</button>
     <button class="small" data-ng-click="logout()" data-ng-show="keycloak.authenticated">Log Out</button>
+    <a class="small" href="{{keycloakConfig.url}}/auth/admin/index.html" target="_blank">Admin</a>
 </div>
 
 <div id="config" data-ng-show="showConfig">
@@ -62,14 +63,10 @@
             <h2>Configure Keycloak</h2>
             <ol>
                 <li><a href="{{keycloakConfig.url}}/auth/admin/index.html#/realms" target="_blank">Create Realm</a></li>
-                <li><a href="{{keycloakConfig.url}}/auth/admin/index.html#/realms/demo-realm/applications" target="_blank">Create App</a></li>
-                <li><a href="{{keycloakConfig.url}}/auth/admin/index.html#/realms/demo-realm/roles" target="_blank">Create Roles</a></li>
-                <li><a href="{{keycloakConfig.url}}/auth/admin/index.html#/realms/demo-realm/users" target="_blank">Create User</a></li>
+                <li><a href="{{keycloakConfig.url}}/auth/admin/index.html#/realms/{{keycloakConfig.realm}}/applications" target="_blank">Create App</a></li>
+                <li><a href="{{keycloakConfig.url}}/auth/admin/index.html#/realms/{{keycloakConfig.realm}}/users" target="_blank">Create User</a></li>
+                <li><a href="{{keycloakConfig.url}}/auth/admin/index.html#/realms/{{keycloakConfig.realm}}/roles" target="_blank">Create Roles</a></li>
             </ol>
-        </section>
-
-        <section>
-            <button class="big" data-ng-click="showConfig = !showConfig">Config App</button>
         </section>
 
         <section>
