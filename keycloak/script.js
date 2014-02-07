@@ -1,70 +1,75 @@
 var demo = angular.module('demo', []);
 
-
 demo.controller('DemoCtrl', function ($scope, $location) {
-    $scope.keycloakServer = sessionStorage.keycloakServer || 'http://localhost:8080';
-    $scope.keycloakConfigJson = sessionStorage.keycloakConfig;
-    $scope.keycloakConfigStatus = 'Not configured';
 
-    if (window.oauth.token) {
-        $scope.token = angular.fromJson(window.oauth.token);
+    $scope.showConfig = true;
+
+    $scope.init = function () {
+        if ($scope.keycloakConfig) {
+            localStorage.keycloakConfig = angular.toJson($scope.keycloakConfig);
+        } else if (localStorage.keycloakConfig) {
+            $scope.keycloakConfig = angular.fromJson(localStorage.keycloakConfig);
+        }
+
+        if (!$scope.keycloakConfig) {
+            $scope.configError = 'Not configured';
+            return;
+        }
+
+        if (!$scope.keycloakConfig.url) {
+            $scope.configError = 'URL missing';
+            return;
+        }
+
+        if (!$scope.keycloakConfig.realm) {
+            $scope.configError = 'Realm missing';
+            return;
+        }
+
+        if (!$scope.keycloakConfig.clientId) {
+            $scope.configError = 'Client Id missing';
+            return;
+        }
+
+        if (!$scope.keycloakConfig.clientSecret) {
+            $scope.configError = 'Client Secret missing';
+            return;
+        }
+
+        delete $scope.configError;
+
+        $scope.keycloak = new Keycloak($scope.keycloakConfig);
+        $scope.keycloak.init(function() {
+            $scope.keycloak.loadUserProfile(function() {
+                $scope.$apply(function() {
+                });
+            });
+        }, function() {
+            $scope.$apply(function() {
+                $scope.configError = 'Auth failed';
+            });
+        });
+
+        $scope.showConfig = false;
     }
 
-    $scope.$watch('keycloakConfigJson', function (config) {
-        try {
-            var c = angular.fromJson(config);
-            if (!c.realm || !c.resource) {
-                $scope.keycloakConfig = null;
-                $scope.keycloakConfigStatus = 'Invalid config';
-            } else if (c.credentials.password == 'INSERT APPLICATION PASSWORD' || c.credentials.password == 'INSERT CLIENT PASSWORD') {
-                $scope.keycloakConfig = null;
-                $scope.keycloakConfigStatus = 'Password not set';
-            } else {
-                sessionStorage.keycloakConfig = config;
-                $scope.keycloakConfig = c;
-                $scope.keycloakConfigStatus = 'Configured';
-            }
-        } catch (err) {
-            delete sessionStorage.keycloakConfig;
-            $scope.keycloakConfigStatus = 'Not configured';
-        }
-    });
+    $scope.init();
 
-    $scope.$watch('keycloakServer', function (server) {
-        sessionStorage.keycloakServer = server;
-    });
+    $scope.login = function () {
+        $scope.keycloak.login();
+    }
 
-    $scope.$on('$locationChangeSuccess', function (event, newUrl) {
-        $scope.slide = parseFloat(location.hash.substring(2).replace('/', '.'));
-    });
-
-    $scope.login = function (slide) {
-        if (!slide) {
-            slide = $scope.slide;
-        }
-
-        var redirect = location.href.split('?')[0].split('#')[0];
-        var state = '#' + btoa('hash=#/' + slide);
-
-        sessionStorage.oauthState = state;
-
-        var url = $scope.keycloakConfig['auth-server-url'] + '/rest/realms/' +  encodeURIComponent($scope.keycloakConfig['realm'])  + '/tokens/login';
-        url += '?client_id=' + $scope.keycloakConfig['resource'];
-        url += '&redirect_uri=' + encodeURIComponent(redirect);
-        url += '&state=' + encodeURIComponent(state);
-
-        document.location = url;
+    $scope.logout = function() {
+        $scope.keycloak.logout();
     }
 
     $scope.reset = function () {
         delete sessionStorage.keycloakConfig;
+        delete sessionStorage.oauthToken;
         delete oauth;
+
+        $scope.keycloakConfig = null;
+        $scope.keycloak = null;
     }
 
-    $scope.logout = function () {
-        var url = $scope.keycloakConfig['auth-server-url'] + '/rest/realms/' +  encodeURIComponent($scope.keycloakConfig['realm'])  + '/tokens/logout';
-        url += '?redirect_uri=' + encodeURIComponent(location.href);
-        document.location = url;
-        sessionStorage.logoutFragment = '/' + $scope.slide;
-    }
 });

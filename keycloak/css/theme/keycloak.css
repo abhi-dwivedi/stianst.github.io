@@ -141,14 +141,19 @@ div#menu {
 }
 
 div#config {
+    background-color: rgba(255, 255, 255, .8);
+    box-shadow: 0 0 6px rgba(0,0,0,.3);
+    border: none;
+    border-radius: 0.5em;
     position: absolute;
+    padding: 1em;
     top: 60px;
     right: 15px;
     z-index: 9999;
-    color: #fff
+    color: #fff;
 }
 
-button.big {
+button.big, a.big {
     background-color: #034672;
     border: 0.05em solid #21799e;
     border-radius: 0.5em;
@@ -160,6 +165,11 @@ button.big {
     padding: 0em 0.5em 0.2em 0.5em;
     margin: 10px;
 }
+
+button.big:hover, a.big:hover {
+    background-color: #21799e;
+}
+
 
 button.normal {
     background-color: #034672;
@@ -194,36 +204,44 @@ pre {
     margin: 10px !important;
 }
 
-div#config textarea {
+#config .controls {
+    margin-left: 10em;
+}
+
+#config label {
+    color: #666;
+    display: inline-block;
+    width: 10em;
+}
+
+#config input {
     background-color: rgba(0,0,0,.8);
     box-shadow: 0 0 6px rgba(0,0,0,.3);
     border: none;
     border-radius: 0.5em;
-    padding: 20px;
+    padding: 10px;
     color: white;
     font-size: 1.2em;
     font-family: monospace;
-    line-height: 1.2em;
-    resize: none;
+    margin-bottom: 1.5em;
+    width: 30em;
 }
 
-div#keycloak-config-controls {
-    background-color: rgba(255,255,255,.8);
-    box-shadow: 0 0 6px rgba(0,0,0,.3);
-    border: none;
+
+.config-error {
+    background-color: #ffcccc;
+    border: 1px solid #21799e;
     border-radius: 0.5em;
-    padding: 5px 10px 8px 10px;
-    color: black;
-    font-size: 1.2em;
+    color: #ff2c2d;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-size: 1.1em;
+    letter-spacing: 0.04em;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+    padding: 2px 10px 5px 10px;
+    margin: 5px;
 }
 
-input {
-    background-color: black;
-    box-shadow: 0 0 6px rgba(0,0,0,.3);
-    border: none;
-    border-radius: 0.5em;
-    padding: 20px;
-    color: white;
-    font-size: 1em;
-    font-family: monospace;
+.col-2 {
+    float: left;
+    width: 50%;
 }
