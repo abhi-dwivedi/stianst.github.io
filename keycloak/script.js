@@ -1,16 +1,11 @@
 var demo = angular.module('demo', []);
 
-demo.controller('DemoCtrl', function ($scope, $location) {
+demo.controller('DemoCtrl', function ($scope) {
+    localStorage.keycloakConfig = angular.toJson($scope.keycloakConfig);
 
     $scope.showConfig = false;
 
     $scope.init = function () {
-        if ($scope.keycloakConfig) {
-            localStorage.keycloakConfig = angular.toJson($scope.keycloakConfig);
-        } else if (localStorage.keycloakConfig) {
-            $scope.keycloakConfig = angular.fromJson(localStorage.keycloakConfig);
-        }
-
         if (!$scope.keycloakConfig) {
             $scope.configError = 'Not configured';
             return;
@@ -50,6 +45,10 @@ demo.controller('DemoCtrl', function ($scope, $location) {
                 $scope.configError = 'Auth failed';
             });
         });
+    }
+
+    $scope.save = function () {
+        localStorage.keycloakConfig = angular.toJson($scope.keycloakConfig);
     }
 
     $scope.init();
