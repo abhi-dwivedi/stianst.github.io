@@ -2,7 +2,7 @@ var demo = angular.module('demo', []);
 
 demo.controller('DemoCtrl', function ($scope, $location) {
 
-    $scope.showConfig = true;
+    $scope.showConfig = false;
 
     $scope.init = function () {
         if ($scope.keycloakConfig) {
@@ -18,6 +18,7 @@ demo.controller('DemoCtrl', function ($scope, $location) {
 
         if (!$scope.keycloakConfig.url) {
             $scope.configError = 'URL missing';
+            $scope.showConfig = true;
             return;
         }
 
@@ -49,8 +50,6 @@ demo.controller('DemoCtrl', function ($scope, $location) {
                 $scope.configError = 'Auth failed';
             });
         });
-
-        $scope.showConfig = false;
     }
 
     $scope.init();
