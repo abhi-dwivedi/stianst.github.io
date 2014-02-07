@@ -49,6 +49,7 @@ demo.controller('DemoCtrl', function ($scope) {
 
     $scope.save = function () {
         localStorage.keycloakConfig = angular.toJson($scope.keycloakConfig);
+        $scope.init();
     }
 
     $scope.init();
