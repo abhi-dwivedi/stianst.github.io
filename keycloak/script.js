@@ -7,8 +7,7 @@ demo.controller('DemoCtrl', function ($scope) {
 
     $scope.init = function () {
         if (!$scope.keycloakConfig) {
-            $scope.configError = 'Not configured';
-            return;
+            $scope.keycloakConfig = {};
         }
 
         if (!$scope.keycloakConfig.url) {
@@ -17,18 +16,8 @@ demo.controller('DemoCtrl', function ($scope) {
             return;
         }
 
-        if (!$scope.keycloakConfig.realm) {
-            $scope.configError = 'Realm missing';
-            return;
-        }
-
-        if (!$scope.keycloakConfig.clientId) {
-            $scope.configError = 'Client Id missing';
-            return;
-        }
-
-        if (!$scope.keycloakConfig.clientSecret) {
-            $scope.configError = 'Client Secret missing';
+        if (!$scope.keycloakConfig.realm || !$scope.keycloakConfig.clientId || !$scope.keycloakConfig.clientSecret) {
+            $scope.configError = 'Not configured';
             return;
         }
 
