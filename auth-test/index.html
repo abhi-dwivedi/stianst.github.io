@@ -15,7 +15,7 @@
             });
 
             keycloak.init(function() {
-                document.getElementById('username').innerText = keycloak.username;
+                document.getElementById('username').innerText = keycloak.subject;
             });
         </script>
         <br><br>
