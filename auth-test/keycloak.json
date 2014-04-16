@@ -1,8 +1,0 @@
-{
-  "realm" : "test",
-  "realm-public-key" : "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAo5dcRLe8WpyaVZ9SoHlXg6ze6ZQCbYggHgTcgDxWzwG9br8m39B3/JZTSpZMGaGk5kdd7qtHKInC13QBEbcSdbeG94XnK6J0Y5FcPoQmNTOMtJUqoQ9DdD/zPgkJMoqi9T8uoPDk9vUXCJOs4Jpa3h00H3I8ECh+1supAsuGsqO9OGSXZykCaL9RVVgedYGqwUKuIRX3KwHPZlpgFRLHc5PwJWgFj+hNvX2nAYeNMO5eES2jypzb/eHGXwQU0Aq++ZJ6/xMdQelkqIiBGp5HJoCPAD+r1fKvojkxDn5XR1PcdGGCQonNUmbgRZm4nGY0nGyWUnXrrjrlTN7SqbkcRwIDAQAB",
-  "auth-server-url" : "https://keycloak-sthorger.rhcloud.com/auth",
-  "ssl-not-required" : false,
-  "resource" : "test",
-  "public-client" : true
-}
