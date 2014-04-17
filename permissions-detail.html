@@ -1,0 +1,78 @@
+<html>
+<style>
+    label { display:inline-block; width: 200px; }
+</style>
+<body>
+
+<form>
+<fieldset>
+    <legend>Resource permissions</legend>
+    <div>
+        <label>Read</label>
+        <select>
+            <option></option>
+            <option>todo-admin</option>
+            <option>todo-user</option>        
+        </select>
+    </div>
+    <div>
+        <label>Update</label>
+        <select>
+            <option></option>
+            <option>todo-admin</option>
+            <option>todo-user</option>        
+        </select>
+    </div>
+    <div>
+        <label>Delete</label>
+        <select>
+            <option></option>
+            <option>todo-admin</option>
+            <option>todo-user</option>        
+        </select>
+    </div>
+    <div>
+        <label>Create Members</label>
+        <select>
+            <option></option>
+            <option>todo-admin</option>
+            <option>todo-user</option>        
+        </select>
+    </div>
+</fieldset>
+
+<fieldset>
+    <legend>Member permissions</legend>
+
+    <input type="checkbox" onload="showMembers(this)" onclick="showMembers(this)"><label>Inherit from parent</label>
+
+    <div id="members-permissions">
+        <div>        
+            <label>User field</label>
+            <input />
+        </div>
+
+        <label>New member permissions</label>
+        <select>
+            <option></option>
+            <option>private</option>
+            <option>public-read</option>        
+            <option>public</option>        
+        </select>        
+    </div>
+</fieldset>
+
+</form>
+
+<script>
+    function showMembers(entry) {
+        if (entry.checked) {
+            document.getElementById('members-permissions').style.display = 'none';
+        } else {
+            document.getElementById('members-permissions').style.display = 'block';
+        }   
+    }
+</script>
+
+</body>
+</html>
