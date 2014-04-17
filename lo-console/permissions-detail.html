@@ -1,40 +1,45 @@
 <html>
+<link href="select2.css" rel="stylesheet"/>
+<script src="jquery-1.11.0.js"></script>
+<script src="select2.js"></script>
+<script>
+    $(document).ready(function() { $('select').select2({ 'width':'400px' }); });
+</script>
 <style>
-    label { display:inline-block; width: 200px; }
+    label { display:inline-block; width: 150px; }
+    div { margin: 0.5em 0; }
 </style>
 <body>
+
+<a href="permissions.html">Back</a>
 
 <form>
 <fieldset>
     <legend>Resource permissions</legend>
     <div>
         <label>Read</label>
-        <select>
-            <option></option>
+        <select multiple>
             <option>todo-admin</option>
             <option>todo-user</option>        
         </select>
     </div>
     <div>
         <label>Update</label>
-        <select>
-            <option></option>
+        <select multiple>
             <option>todo-admin</option>
             <option>todo-user</option>        
         </select>
     </div>
     <div>
         <label>Delete</label>
-        <select>
-            <option></option>
+        <select multiple>
             <option>todo-admin</option>
             <option>todo-user</option>        
         </select>
     </div>
     <div>
         <label>Create Members</label>
-        <select>
-            <option></option>
+        <select multiple>
             <option>todo-admin</option>
             <option>todo-user</option>        
         </select>
@@ -42,14 +47,53 @@
 
     <div>
         <label>Member permissions</label>
-        <select>
-            <option>inherit from parent</option>
+        <select multiple>
+            <option onclick="console.debug(this)">inherit from parent</option>
             <option>private</option>
             <option>public-read</option>        
             <option>public</option>        
         </select>        
     </div>
-</fieldset>    
+</fieldset>
+
+<fieldset>
+    <legend>Member permissions</legend>    
+
+    <div>
+        <label>Creator permissions</label>
+        <select multiple>
+            <option>read</option>
+            <option>update</option>
+            <option>delete</option>        
+        </select> 
+    </div>
+
+    <div>
+        <label>Read</label>
+        <select multiple>
+            <option>todo-admin</option>
+            <option>todo-user</option>        
+        </select>
+    </div>
+    <div>
+        <label>Update</label>
+        <select multiple>
+            <option>todo-admin</option>
+            <option>todo-user</option>        
+        </select>
+    </div>
+    <div>
+        <label>Delete</label>
+        <select multiple>
+            <option>todo-admin</option>
+            <option>todo-user</option>        
+        </select>
+    </div>
+
+</fieldset>
+
+<button>Save</button>
+<button>Cancel</button>
 
 </form>
 
