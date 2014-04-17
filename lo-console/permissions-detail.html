@@ -39,40 +39,26 @@
             <option>todo-user</option>        
         </select>
     </div>
-</fieldset>
 
-<fieldset>
-    <legend>Member permissions</legend>
-
-    <input type="checkbox" onload="showMembers(this)" onclick="showMembers(this)"><label>Inherit from parent</label>
-
-    <div id="members-permissions">
-        <div>        
-            <label>User field</label>
-            <input />
-        </div>
-
-        <label>New member permissions</label>
+    <div>
+        <label>Member permissions</label>
         <select>
-            <option></option>
+            <option>inherit from parent</option>
             <option>private</option>
             <option>public-read</option>        
             <option>public</option>        
         </select>        
     </div>
 </fieldset>
+        <label>Member permissions</label>
+        <select>
+            <option>inherit from parent</option>
+            <option>private</option>
+            <option>public-read</option>        
+            <option>public</option>        
+        </select>        
 
 </form>
-
-<script>
-    function showMembers(entry) {
-        if (entry.checked) {
-            document.getElementById('members-permissions').style.display = 'none';
-        } else {
-            document.getElementById('members-permissions').style.display = 'block';
-        }   
-    }
-</script>
 
 </body>
 </html>
