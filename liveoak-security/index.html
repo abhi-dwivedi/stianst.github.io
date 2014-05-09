@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>LiveOak</title>
+
+    <meta name="description" content="...">
+    <meta name="author" content="Stian Thorgersen">
+
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/liveoak.css" id="theme">
+
+    <link href='fonts/fonts.css' rel='stylesheet'
+          type='text/css'>
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+        document.write('<link rel="stylesheet" href="css/print/' + ( window.location.search.match(/print-pdf/gi) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">');
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<div class="reveal">
+    <div class="slides">
+
+        <section>
+            <h1>LiveOak Security</h1>
+        </section>
+
+        <section>
+            <h2>Overview</h2>
+            <img src="images/overview.svg"/>
+        </section>
+
+        <section>
+            <h1>Auth</h1>
+
+            <p>Powered by Keycloak</p>
+        </section>
+
+        <section>
+            <h2>Model</h2>
+            <img src="images/keycloak-model.svg"/>
+        </section>
+
+        <section>
+            <section>
+                <h2>Integration</h2>
+
+                <p>Store and Endpoints</p>
+
+                <img src="images/arrown-down.svg"/>
+
+                <p>JPA/H2 and RestEasy</p>
+
+                <div class="fragment">
+                    <img src="images/arrown-down.svg"/>
+
+                    <p>Mongo and Resources</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Store</h2>
+
+                <div class="space-top col-3"><p>Model SPI</p></div>
+                <div class="space-top col-3"><p>We already have<br/> the basics</p></div>
+                <div class="space-top col-3"><p>Doesn't depend<br/>on JAX-RS</p></div>
+            </section>
+
+            <section>
+                <h2>Endpoints</h2>
+
+                <div class="space-top col-3">
+                    <h3>OAuth</h3>
+
+                    <p>Hard</p></div>
+                <div class="space-top col-3">
+                    <h3>Forms</h3>
+
+                    <p>Medium</p></div>
+                <div class="space-top col-3">
+                    <h3>Config</h3>
+
+                    <p>Easy</p></div>
+            </section>
+
+            <section>
+                <h2>Admin</h2>
+
+                <p>JAX-RS endpoints pretty much just wraps model</p>
+
+                <div class="fragment">
+                    <img src="images/arrown-down.svg"/>
+
+                    <p>Easy</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Forms</h2>
+
+                <p>Would need a bit of refactoring</p>
+
+                <div class="fragment">
+                    <img src="images/arrown-down.svg"/>
+
+                    <p>Medium</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>OAuth</h2>
+
+                <p>Depends a fair amount on JAX-RS</p>
+
+                <div class="fragment">
+                    <img src="images/arrown-down.svg"/>
+
+                    <p>Harder</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Alternatives</h2>
+
+                <div class="space-top col-3">
+                    <h3>Core</h3>
+
+                    <p>Keycloak core<br/>without JAX-RS</p>
+                </div>
+
+                <div class="space-top col-3">
+                    <h3>JAX-RS</h3>
+
+                    <p>LiveOak wrapper<br/>for JAX-RS</p>
+                </div>
+
+                <div class="space-top col-3">
+                    <h3>RestEasy</h3>
+
+                    <p>RestEasy has Netty integration</p>
+                </div>
+
+                <div class="clearfix"></div>
+
+                <div class="space-top fragment">
+                    <p>Or a combination?</p>
+                </div>
+            </section>
+        </section>
+
+        <section>
+            <h1>Authz</h1>
+
+            <p>Authz decisions by authz service and policies</p>
+
+            <p>Not hard-coded into resources/services</p>
+        </section>
+
+        <section>
+            <section>
+                <h2>Authz Service</h2>
+
+                <p>Delegates decision to one or more policies</p>
+            </section>
+            <section>
+                <img src="images/authz.svg"/>
+            </section>
+            <section>
+                <p>A policy can include/exclude resources</p>
+
+                <p>May add more options, but for now we're keeping it simple</p>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h2>Default Policies</h2>
+
+                <p>Built-in policies should cover at least 80% use-cases</p>
+            </section>
+
+            <section>
+                <h3>MADs can manage access to resouce</h3>
+                <p class="fragment">Anyone with role 'gallery-user' can upload a picture</p>
+            </section>
+
+            <section>
+                <h3>Ownership and sharing</h3>
+                <p class="fragment">A user can upload and delete his own pictures</p>
+                <p class="fragment">A user can also share pictures with everyone, or with specific people</p>
+            </section>
+
+            <section>
+                <h2>Revisit</h2>
+                <p class="fragment">Gather requirements and use-cases</p>
+                <p class="fragment">Design for MADs</p>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h2>MAD</h2>
+
+                <ul>
+                    <li class="fragment">Create organization</li>
+                    <li class="fragment">Config security for organization</li>
+                    <li class="fragment">For example enable social login</li>
+                    <li class="fragment">Create theme for login forms</li>
+                </ul>
+            </section>
+            <section>
+                <ul>
+                    <li class="fragment">Create server application</li>
+                    <li class="fragment">Add roles</li>
+                    <li class="fragment">Config policies</li>
+                </ul>
+            </section>
+            <section>
+                <ul>
+                    <li class="fragment">Create client application</li>
+                    <li class="fragment">Config scope</li>
+                    <li class="fragment">Get client SDK and config</li>
+                    <li class="fragment">Update app</li>
+                </ul>
+            </section>
+            <section>
+                <ul>
+                    <li class="fragment">Manage users</li>
+                    <li class="fragment">Manage role mappings</li>
+                    <li class="fragment">View audit logs</li>
+                    <li class="fragment">Manage policies</li>
+                </ul>
+            </section>
+        </section>
+
+        <section>
+            <h2>Road Map</h2>
+
+            <ol>
+                <li>Auth</li>
+                <ul>
+                    <li>Theme support for forms</li>
+                    <li>Mongo store</li>
+                    <li>Stomp and websocket support</li>
+                </ul>
+                <li>Authz</li>
+                <ul>
+                    <li>Default policies</li>
+                </ul>
+                <li>Improve Keycloak integration</li>
+                <li>Enterprise features</li>
+                <ul>
+                    <li>LDAP</li>
+                    <li>...</li>
+                </ul>
+            </ol>
+        </section>
+
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.min.js"></script>
+
+        <script>
+
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+
+                theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+                // Parallax scrolling
+                // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+                // parallaxBackgroundSize: '2100px 900px',
+
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                    { src: 'lib/js/classList.js', condition: function () {
+                        return !document.body.classList;
+                    } },
+                    { src: 'plugin/markdown/marked.js', condition: function () {
+                        return !!document.querySelector('[data-markdown]');
+                    } },
+                    { src: 'plugin/markdown/markdown.js', condition: function () {
+                        return !!document.querySelector('[data-markdown]');
+                    } },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function () {
+                        hljs.initHighlightingOnLoad();
+                    } },
+                    { src: 'plugin/zoom-js/zoom.js', async: true, condition: function () {
+                        return !!document.body.classList;
+                    } },
+                    { src: 'plugin/notes/notes.js', async: true, condition: function () {
+                        return !!document.body.classList;
+                    } }
+                ]
+            });
+
+        </script>
+
+</body>
+</html>

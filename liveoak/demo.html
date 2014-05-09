@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat Demo</title>
+
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+
+    <script src="http://localhost:8080/chat/client/liveoak.js"></script>
+
+    <script>
+        function ChatCtrl($scope) {
+            var liveoak = new LiveOak();
+
+            $scope.readChat = function () {
+                liveoak.readMembers('/chat/storage/chat', {
+                    sort: 'time',
+                    limit: '5',
+                    success: function (messages) {
+                        $scope.$apply(function () {
+                            $scope.messages = messages;
+                        });
+                    }
+                });
+            };
+
+            $scope.create = function () {
+                liveoak.create('/chat/storage/chat', { message: $scope.message, time: new Date().getTime() }, { success: function () {
+                    $scope.readChat();
+                    delete $scope.message;
+                } });
+            }
+
+            liveoak.connect(function () {
+                liveoak.subscribe('/chat/storage/chat/*', function (data, action) {
+                    $scope.readChat();
+                });
+            });
+
+            $scope.readChat();
+        }
+    </script>
+
+</head>
+
+<body data-ng-app data-ng-controller="ChatCtrl" style="margin: 5%;">
+
+<form data-ng-submit="create();">
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Text input" data-ng-model="message">
+    </div>
+</form>
+
+<div class="alert alert-info" data-ng-repeat="m in messages"><strong>{{m.time|date:'medium'}}</strong> {{m.message}}</div>
+
+</body>
+
+</html>

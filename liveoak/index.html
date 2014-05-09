@@ -39,239 +39,109 @@
     <div class="slides">
 
         <section>
-            <h1>LiveOak Security</h1>
+            <h1>LiveOak</h1>
+
+            <p>Stian Thorgersen / stian@redhat.com</p>
         </section>
 
         <section>
-            <h2>Overview</h2>
-            <img src="images/overview.svg"/>
+            <h3>(Mobile)</h3>
+            <h2>Backend as a Service</h2>
         </section>
 
         <section>
-            <h1>Auth</h1>
-
-            <p>Powered by Keycloak</p>
+            <h2>IaaS <img src="images/arrown-right.svg"/> PaaS <img src="images/arrown-right.svg"/> (M)BaaS</h2>
         </section>
 
         <section>
-            <h2>Model</h2>
-            <img src="images/keycloak-model.svg"/>
+            <h2>(M)BaaS Features</h2>
+            <ul>
+                <li>SDKs / APIs</li>
+                <li>Storage</li>
+                <li>Security / Users</li>
+                <li>Push / Sync</li>
+                <li>Custom Business Logic</li>
+            </ul>
         </section>
 
         <section>
-            <section>
-                <h2>Integration</h2>
-
-                <p>Store and Endpoints</p>
-
-                <img src="images/arrown-down.svg"/>
-
-                <p>JPA/H2 and RestEasy</p>
-
-                <div class="fragment">
-                    <img src="images/arrown-down.svg"/>
-
-                    <p>Mongo and Resources</p>
-                </div>
-            </section>
-
-            <section>
-                <h2>Store</h2>
-
-                <div class="space-top col-3"><p>Model SPI</p></div>
-                <div class="space-top col-3"><p>We already have<br/> the basics</p></div>
-                <div class="space-top col-3"><p>Doesn't depend<br/>on JAX-RS</p></div>
-            </section>
-
-            <section>
-                <h2>Endpoints</h2>
-
-                <div class="space-top col-3">
-                    <h3>OAuth</h3>
-
-                    <p>Hard</p></div>
-                <div class="space-top col-3">
-                    <h3>Forms</h3>
-
-                    <p>Medium</p></div>
-                <div class="space-top col-3">
-                    <h3>Config</h3>
-
-                    <p>Easy</p></div>
-            </section>
-
-            <section>
-                <h2>Admin</h2>
-
-                <p>JAX-RS endpoints pretty much just wraps model</p>
-
-                <div class="fragment">
-                    <img src="images/arrown-down.svg"/>
-
-                    <p>Easy</p>
-                </div>
-            </section>
-
-            <section>
-                <h2>Forms</h2>
-
-                <p>Would need a bit of refactoring</p>
-
-                <div class="fragment">
-                    <img src="images/arrown-down.svg"/>
-
-                    <p>Medium</p>
-                </div>
-            </section>
-
-            <section>
-                <h2>OAuth</h2>
-
-                <p>Depends a fair amount on JAX-RS</p>
-
-                <div class="fragment">
-                    <img src="images/arrown-down.svg"/>
-
-                    <p>Harder</p>
-                </div>
-            </section>
-
-            <section>
-                <h2>Alternatives</h2>
-
-                <div class="space-top col-3">
-                    <h3>Core</h3>
-
-                    <p>Keycloak core<br/>without JAX-RS</p>
-                </div>
-
-                <div class="space-top col-3">
-                    <h3>JAX-RS</h3>
-
-                    <p>LiveOak wrapper<br/>for JAX-RS</p>
-                </div>
-
-                <div class="space-top col-3">
-                    <h3>RestEasy</h3>
-
-                    <p>RestEasy has Netty integration</p>
-                </div>
-
-                <div class="clearfix"></div>
-
-                <div class="space-top fragment">
-                    <p>Or a combination?</p>
-                </div>
-            </section>
+            <h2>LiveOak</h2>
         </section>
 
         <section>
-            <h1>Authz</h1>
-
-            <p>Authz decisions by authz service and policies</p>
-
-            <p>Not hard-coded into resources/services</p>
+            <h3>Lightweight - Polyglot - Modular - REST</h3>
+            <p>Container for Resources layered on top of WildFly</p>
         </section>
 
         <section>
-            <section>
-                <h2>Authz Service</h2>
-
-                <p>Delegates decision to one or more policies</p>
-            </section>
-            <section>
-                <img src="images/authz.svg"/>
-            </section>
-            <section>
-                <p>A policy can include/exclude resources</p>
-
-                <p>May add more options, but for now we're keeping it simple</p>
-            </section>
+            <h2>Unified SDKs and APIs</h2>
+            <p>REST/JSON<br/>over<br/>HTTP/WebSockets/Push</p>
         </section>
 
         <section>
-            <section>
-                <h2>Default Policies</h2>
-
-                <p>Built-in policies should cover at least 80% use-cases</p>
-            </section>
-
-            <section>
-                <h3>MADs can manage access to resouce</h3>
-                <p class="fragment">Anyone with role 'gallery-user' can upload a picture</p>
-            </section>
-
-            <section>
-                <h3>Ownership and sharing</h3>
-                <p class="fragment">A user can upload and delete his own pictures</p>
-                <p class="fragment">A user can also share pictures with everyone, or with specific people</p>
-            </section>
-
-            <section>
-                <h2>Revisit</h2>
-                <p class="fragment">Gather requirements and use-cases</p>
-                <p class="fragment">Design for MADs</p>
-            </section>
+            <h2>Subscriptions</h2>
+            <p>Notifications when resources change</p>
         </section>
 
         <section>
-            <section>
-                <h2>MAD</h2>
-
-                <ul>
-                    <li class="fragment">Create organization</li>
-                    <li class="fragment">Config security for organization</li>
-                    <li class="fragment">For example enable social login</li>
-                    <li class="fragment">Create theme for login forms</li>
-                </ul>
-            </section>
-            <section>
-                <ul>
-                    <li class="fragment">Create server application</li>
-                    <li class="fragment">Add roles</li>
-                    <li class="fragment">Config policies</li>
-                </ul>
-            </section>
-            <section>
-                <ul>
-                    <li class="fragment">Create client application</li>
-                    <li class="fragment">Config scope</li>
-                    <li class="fragment">Get client SDK and config</li>
-                    <li class="fragment">Update app</li>
-                </ul>
-            </section>
-            <section>
-                <ul>
-                    <li class="fragment">Manage users</li>
-                    <li class="fragment">Manage role mappings</li>
-                    <li class="fragment">View audit logs</li>
-                    <li class="fragment">Manage policies</li>
-                </ul>
-            </section>
+            <h2>Console</h2>
+            <p>Define and manage your backend</p>
         </section>
 
         <section>
-            <h2>Road Map</h2>
-
-            <ol>
-                <li>Auth</li>
-                <ul>
-                    <li>Theme support for forms</li>
-                    <li>Mongo store</li>
-                    <li>Stomp and websocket support</li>
-                </ul>
-                <li>Authz</li>
-                <ul>
-                    <li>Default policies</li>
-                </ul>
-                <li>Improve Keycloak integration</li>
-                <li>Enterprise features</li>
-                <ul>
-                    <li>LDAP</li>
-                    <li>...</li>
-                </ul>
-            </ol>
+            <h2>Storage</h2>
+            <p>By MongoDB</p>
         </section>
+
+        <section>
+            <h2>Authentication</h2>
+            <p>By Keycloak</p>
+        </section>
+
+        <section>
+            <h2>Authorization</h2>
+            <p>Built-in and custom Policies</p>
+        </section>
+
+        <section>
+            <h2>Push Notifications</h2>
+            <p>By UPS</p>
+        </section>
+
+        <section>
+            <h2>Alpha 1 in June</h2>
+            <p>Local Server & OpenShift</p>
+        </section>
+
+        <section>
+            <h2>What's next?</h2>
+        </section>
+
+        <section>
+            <h2>Business Logic</h2>
+            <p>Polyglot</p>
+        </section>
+
+        <section>
+            <h2>Provisioning</h2>
+            <p>By OpenShift</p>
+        </section>
+
+        <section>
+            <h2>Data Sync</h2>
+            <p>Offline data</p>
+        </section>
+
+        <section>
+            <h2>Enterprise Features</h2>
+            <p>Clustering - Transactions - LDAP - RDBMS</p>
+        </section>
+
+        <section>
+            <h2>Tooling - APIs - SDKs</h2>
+        </section>
+    </div>
+</div>
 
         <script src="lib/js/head.min.js"></script>
         <script src="js/reveal.min.js"></script>

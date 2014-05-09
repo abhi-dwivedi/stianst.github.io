@@ -9,8 +9,8 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="32.5"
-   height="46.61055"
+   width="48.75"
+   height="69.940399"
    id="svg4433"
    version="1.1"
    inkscape:version="0.48.4 r9939"
@@ -23,8 +23,8 @@
      inkscape:pageopacity="0.94509804"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4"
-     inkscape:cx="6.4925253"
-     inkscape:cy="9.2049354"
+     inkscape:cx="7.1175257"
+     inkscape:cy="35.847285"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -125,7 +125,7 @@
      id="layer1"
      inkscape:groupmode="layer"
      inkscape:label="Layer 1"
-     transform="translate(-422.03154,-549.59375)">
+     transform="translate(-421.40654,-552.90625)">
     <path
        sodipodi:nodetypes="cc"
        inkscape:export-ydpi="90"
@@ -133,7 +133,7 @@
        inkscape:export-filename="/home/st/Documents/Work/keycloak-presentation/overview.png"
        inkscape:connector-curvature="0"
        id="path4214"
-       d="m 438.28154,549.58626 0,27.86804"
-       style="fill:none;stroke:#ffffff;stroke-width:13.33333302;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#TriangleOutSl)" />
+       d="m 445.78154,552.91959 0,41.80206"
+       style="fill:none;stroke:#ffffff;stroke-width:20;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#TriangleOutSl)" />
   </g>
 </svg>
