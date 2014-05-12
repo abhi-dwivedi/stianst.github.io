@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat</title>
+
+    <link rel="stylesheet" href="demo.css">
+
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+
+    <script src="liveoak.js"></script>
+    <script src="demo.js"></script>
+</head>
+
+<body ng-app ng-controller="ChatCtrl">
+
+<form ng-submit="create();">
+    <input ng-model="message">
+</form>
+
+<div ng-repeat="m in messages">
+    <strong>{{m.time|date:'mediumTime'}}</strong> {{m.message}}
+</div>
+
+</body>
+
+</html>
