@@ -11,38 +11,8 @@
 
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
 
-    <script src="http://localhost:8080/chat/client/liveoak.js"></script>
-
     <script>
         function ChatCtrl($scope) {
-            var liveoak = new LiveOak();
-
-            $scope.readChat = function () {
-                liveoak.readMembers('/chat/storage/chat', {
-                    sort: 'time',
-                    limit: '5',
-                    success: function (messages) {
-                        $scope.$apply(function () {
-                            $scope.messages = messages;
-                        });
-                    }
-                });
-            };
-
-            $scope.create = function () {
-                liveoak.create('/chat/storage/chat', { message: $scope.message, time: new Date().getTime() }, { success: function () {
-                    $scope.readChat();
-                    delete $scope.message;
-                } });
-            }
-
-            liveoak.connect(function () {
-                liveoak.subscribe('/chat/storage/chat/*', function (data, action) {
-                    $scope.readChat();
-                });
-            });
-
-            $scope.readChat();
         }
     </script>
 
@@ -56,7 +26,7 @@
     </div>
 </form>
 
-<div class="alert alert-info" data-ng-repeat="m in messages"><strong>{{m.time|date:'medium'}}</strong> {{m.message}}</div>
+<div class="alert alert-info" data-ng-repeat="m in messages">{{m.message}}</div>
 
 </body>
 
