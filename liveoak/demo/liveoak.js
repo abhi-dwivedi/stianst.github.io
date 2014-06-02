@@ -347,6 +347,7 @@ var Keycloak = function (config) {
 
     function setToken(token, refreshToken) {
         if (token) {
+console.debug("setting token to " + token);
             kc.token = token;
             kc.tokenParsed = JSON.parse(decodeURIComponent(escape(window.atob( token.split('.')[1] ))));
             kc.authenticated = true;
@@ -364,6 +365,7 @@ var Keycloak = function (config) {
                 }
             }
         } else {
+console.debug("deleting token");
             delete kc.token;
             delete kc.tokenParsed;
             delete kc.subject;
@@ -2327,6 +2329,8 @@ var LiveOak = function( options ) {
         this.auth = auth;
 
         http.getToken = function() {
+console.debug("get token = " + auth);
+console.debug("get token = " + auth.token);
             return auth.token;
         }
     }
