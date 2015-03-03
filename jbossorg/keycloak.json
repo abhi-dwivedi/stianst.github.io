@@ -1,0 +1,6 @@
+{
+  "auth-server-url": "https://keycloak-sthorger.rhcloud.com/auth",
+  "realm": "jbossorg",
+  "resource": "web",
+  "public-client": true
+}
