@@ -89,12 +89,11 @@
                 var callback = parseCallback(window.location.href);
 
                 if (callback) {
+                    setupCheckLoginIframe();
                     window.history.replaceState({}, null, callback.newUrl);
                     processCallback(callback, initPromise);
                     return;
                 } else if (initOptions) {
-
-
                     if (initOptions.token || initOptions.refreshToken) {
                         setToken(initOptions.token, initOptions.refreshToken, initOptions.idToken);
 
@@ -141,7 +140,7 @@
 
             sessionStorage.oauthState = JSON.stringify({ state: state, redirectUri: encodeURIComponent(redirectUri) });
 
-            var action = 'login';
+            var action = 'auth';
             if (options && options.action == 'register') {
                 action = 'registrations';
             }
@@ -162,7 +161,7 @@
             }
 
             if (options && options.idpHint) {
-                url += '&k_idp_hint=' + options.idpHint;
+                url += '&kc_idp_hint=' + options.idpHint;
             }
 
             return url;
@@ -285,7 +284,7 @@
                     promise.setSuccess(false);
                 } else {
                     var params = 'grant_type=refresh_token&' + 'refresh_token=' + kc.refreshToken;
-                    var url = getRealmUrl() + '/protocol/openid-connect/refresh';
+                    var url = getRealmUrl() + '/protocol/openid-connect/token';
 
                     refreshQueue.push(promise);
 
@@ -337,6 +336,16 @@
             return promise.promise;
         }
 
+        kc.clearToken = function() {
+            if (kc.token) {
+                setToken(null, null, null);
+                kc.onAuthLogout && kc.onAuthLogout();
+                if (kc.loginRequired) {
+                    kc.login();
+                }
+            }
+        }
+
         function getRealmUrl() {
             if (kc.authServerUrl.charAt(kc.authServerUrl.length - 1) == '/') {
                 return kc.authServerUrl + 'realms/' + encodeURIComponent(kc.realm);
@@ -359,8 +368,8 @@
             var prompt = oauth.prompt;
 
             if (code) {
-                var params = 'code=' + code;
-                var url = getRealmUrl() + '/protocol/openid-connect/access/codes';
+                var params = 'code=' + code + '&grant_type=authorization_code';
+                var url = getRealmUrl() + '/protocol/openid-connect/token';
 
                 var req = new XMLHttpRequest();
                 req.open('POST', url, true);
@@ -464,21 +473,7 @@
             return promise.promise;
         }
 
-        function clearToken() {
-            if (kc.token) {
-                setToken(null, null, null);
-                kc.onAuthLogout && kc.onAuthLogout();
-                if (kc.loginRequired) {
-                    kc.login();
-                }
-            }
-        }
-
         function setToken(token, refreshToken, idToken) {
-//            if (token || refreshToken) {
-//                setupCheckLoginIframe();
-//            }
-
             if (token) {
                 kc.token = token;
                 kc.tokenParsed = decodeToken(token);
@@ -572,7 +567,12 @@
                 var oauth = {};
 
                 oauth.newUrl = url.split('?')[0];
-                var params = url.split('?')[1].split('&');
+                var paramString = url.split('?')[1];
+                var fragIndex = paramString.indexOf('#');
+                if (fragIndex != -1) {
+                    paramString = paramString.substring(0, fragIndex);
+                }
+                var params = paramString.split('&');
                 for (var i = 0; i < params.length; i++) {
                     var p = params[i].split('=');
                     switch (decodeURIComponent(p[0])) {
@@ -657,6 +657,7 @@
             var promise = createPromise();
 
             if (!loginIframe.enable) {
+                promise.setSuccess();
                 return promise.promise;
             }
 
@@ -696,7 +697,7 @@
                 if ((!kc.sessionId || kc.sessionId == data.session) && data.loggedIn) {
                     promise.setSuccess();
                 } else {
-                    clearToken();
+                    kc.clearToken();
                     promise.setError();
                 }
             };
@@ -714,6 +715,7 @@
 
         function checkLoginIframe() {
             var promise = createPromise();
+
             if (loginIframe.iframe && loginIframe.iframeOrigin) {
                 var msg = {};
                 msg.callbackId = createCallbackId();
@@ -830,7 +832,7 @@
                             if (error) {
                                 promise.setError();
                             } else {
-                                clearToken();
+                                kc.clearToken();
                                 promise.setSuccess();
                             }
                         });

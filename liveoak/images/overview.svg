@@ -13,7 +13,7 @@
    height="701.64331"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.4 r9939"
+   inkscape:version="0.48.5 r10040"
    inkscape:export-filename="/home/st/Documents/Work/keycloak-presentation/how-1.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90"
@@ -25,11 +25,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.70710678"
-     inkscape:cx="373.61592"
-     inkscape:cy="460.13513"
+     inkscape:zoom="1.2872566"
+     inkscape:cx="426.09998"
+     inkscape:cy="382.67234"
      inkscape:document-units="px"
-     inkscape:current-layer="g5019"
+     inkscape:current-layer="g4012"
      showgrid="false"
      inkscape:window-width="2048"
      inkscape:window-height="1128"
@@ -39,7 +39,9 @@
      fit-margin-top="0"
      fit-margin-left="0"
      fit-margin-right="0"
-     fit-margin-bottom="0">
+     fit-margin-bottom="0"
+     showguides="true"
+     inkscape:guide-bbox="true">
     <inkscape:grid
        snapvisiblegridlinesonly="true"
        enabled="true"
@@ -52,6 +54,19 @@
   </sodipodi:namedview>
   <defs
      id="defs4">
+    <marker
+       inkscape:stockid="Arrow1Send"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Send"
+       style="overflow:visible;">
+      <path
+         id="path4251"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;"
+         transform="scale(0.2) rotate(180) translate(6,0)" />
+    </marker>
     <marker
        style="overflow:visible"
        id="Arrow2Mstart"
@@ -180,13 +195,38 @@
     </marker>
     <filter
        inkscape:collect="always"
-       id="filter4068"
-       color-interpolation-filters="sRGB">
+       id="filter3976">
       <feGaussianBlur
          inkscape:collect="always"
-         stdDeviation="3.75"
-         id="feGaussianBlur4070" />
+         stdDeviation="4.05625"
+         id="feGaussianBlur3978" />
     </filter>
+    <marker
+       inkscape:stockid="Arrow1SendK"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1SendK"
+       style="overflow:visible;">
+      <path
+         id="path4723"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="stroke:#000000;stroke-width:1.0pt;fill:#000000;fill-rule:evenodd"
+         transform="scale(0.2) rotate(180) translate(6,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1SendKq"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1SendKq"
+       style="overflow:visible;">
+      <path
+         id="path4832"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#afafaf;stroke-width:1.0pt;fill:#afafaf"
+         transform="scale(0.2) rotate(180) translate(6,0)" />
+    </marker>
   </defs>
   <metadata
      id="metadata7">
@@ -205,461 +245,177 @@
      id="layer2"
      inkscape:label="Layer"
      style="display:inline"
-     transform="translate(-212.28427,-217.14088)">
-    <rect
-       inkscape:export-ydpi="90"
-       inkscape:export-xdpi="90"
-       inkscape:export-filename="/home/st/dev/stianst.github.io/liveoak/images/overview.png"
-       ry="20"
-       rx="20"
-       y="218.14088"
-       x="213.28427"
-       height="699.64331"
-       width="1187.3511"
-       id="rect3064"
-       style="fill:#000000;fill-opacity:0.21568627;stroke:#ffffff;stroke-width:2;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
-  </g>
+     transform="translate(-212.28427,-217.14088)" />
   <g
      id="layer1"
      inkscape:groupmode="layer"
      inkscape:label="Layer 1"
      transform="translate(-212.28427,-269.50306)">
-    <text
-       xml:space="preserve"
-       style="font-size:14px;font-style:normal;font-weight:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans"
-       x="659.15228"
-       y="738.78619"
-       id="text4071"
-       sodipodi:linespacing="125%"
-       inkscape:export-filename="/home/st/Documents/Work/keycloak-presentation/grants-1.png"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90"><tspan
-         sodipodi:role="line"
-         id="tspan4073"
-         x="659.15228"
-         y="738.78619"
-         style="font-size:22px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;text-anchor:start;fill:#ffffff;fill-opacity:1;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Medium">Request with</tspan><tspan
-         sodipodi:role="line"
-         x="659.15228"
-         y="766.28619"
-         style="font-size:22px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;text-anchor:start;fill:#ffffff;fill-opacity:1;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Medium"
-         id="tspan4075">Security Context</tspan></text>
     <g
-       id="g3037"
-       transform="translate(140.57143,397)">
-      <g
-         inkscape:export-ydpi="90"
-         inkscape:export-xdpi="90"
-         inkscape:export-filename="/home/st/Documents/Work/keycloak-presentation/overview.png"
-         transform="translate(251.42857,0)"
-         id="g5019">
-        <rect
-           inkscape:export-ydpi="90"
-           inkscape:export-xdpi="90"
-           inkscape:export-filename="/home/st/Documents/Work/keycloak-presentation/grants-1.png"
-           style="fill:#000000;fill-opacity:0.39215686;stroke:#ffffff;stroke-width:2;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;filter:url(#filter4068)"
-           id="rect4076"
-           width="200"
-           height="100"
-           x="55.558392"
-           y="137.74673"
-           rx="20"
-           ry="20" />
-        <rect
-           style="fill:#ffffff;fill-opacity:0.39215686;stroke:#ffffff;stroke-width:2;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-           id="rect3793"
-           width="200"
-           height="100"
-           x="54.548237"
-           y="137.74673"
-           rx="20"
-           ry="20"
-           inkscape:export-filename="/home/st/Documents/Work/keycloak-presentation/grants-1.png"
-           inkscape:export-xdpi="90"
-           inkscape:export-ydpi="90" />
-        <text
-           xml:space="preserve"
-           style="font-size:14px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans"
-           x="154.67648"
-           y="179.92273"
-           id="text3795"
-           sodipodi:linespacing="125%"
-           inkscape:export-filename="/home/st/Documents/Work/keycloak-presentation/grants-1.png"
-           inkscape:export-xdpi="90"
-           inkscape:export-ydpi="90"><tspan
-             sodipodi:role="line"
-             id="tspan3797"
-             x="154.67648"
-             y="179.92273"
-             style="font-size:32px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Medium">Auth</tspan><tspan
-             sodipodi:role="line"
-             x="154.67648"
-             y="219.92273"
-             style="font-size:32px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Medium"
-             id="tspan3266">Service</tspan></text>
-      </g>
+       id="g3984"
+       transform="translate(0,26.412761)">
+      <rect
+         style="opacity:0.98999999;fill:#000000;fill-opacity:0.29411765;stroke:none;filter:url(#filter3976)"
+         id="rect3958"
+         width="216.5"
+         height="108"
+         x="201"
+         y="266.14331"
+         transform="translate(212.28427,269.50306)"
+         rx="20"
+         ry="20" />
+      <rect
+         ry="20"
+         rx="20"
+         transform="translate(212.28427,269.50306)"
+         y="266.14331"
+         x="201"
+         height="108"
+         width="216.5"
+         id="rect3956"
+         style="fill:none;stroke:#ffffff;stroke-width:2.79999995;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text3980"
+         y="604.90637"
+         x="520.68304"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu"
+         xml:space="preserve"><tspan
+           style="text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1"
+           y="604.90637"
+           x="520.68304"
+           id="tspan3982"
+           sodipodi:role="line">Keycloak</tspan></text>
     </g>
     <g
-       transform="translate(81.428572,608.57143)"
-       id="g3044">
-      <g
-         id="g3046"
-         transform="translate(251.42857,0)"
-         inkscape:export-filename="/home/st/Documents/Work/keycloak-presentation/overview.png"
-         inkscape:export-xdpi="90"
-         inkscape:export-ydpi="90" />
+       id="g4000"
+       transform="translate(480.86761,-127.40273)">
+      <rect
+         ry="20"
+         rx="20"
+         transform="translate(212.28427,269.50306)"
+         y="266.14331"
+         x="201"
+         height="108"
+         width="216.5"
+         id="rect4002"
+         style="opacity:0.98999999;fill:#000000;fill-opacity:0.29411765;stroke:none;filter:url(#filter3976)" />
+      <rect
+         style="fill:none;stroke:#ffffff;stroke-width:2.79999995;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         id="rect4004"
+         width="216.5"
+         height="108"
+         x="201"
+         y="266.14331"
+         transform="translate(212.28427,269.50306)"
+         rx="20"
+         ry="20" />
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu"
+         x="520.68304"
+         y="604.90637"
+         id="text4006"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan4008"
+           x="520.68304"
+           y="604.90637"
+           style="text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1">LDAP</tspan></text>
     </g>
     <g
-       transform="translate(601.57143,397)"
-       id="g3070">
-      <g
-         id="g3072"
-         transform="translate(251.42857,0)"
-         inkscape:export-filename="/home/st/Documents/Work/keycloak-presentation/overview.png"
-         inkscape:export-xdpi="90"
-         inkscape:export-ydpi="90">
-        <rect
-           ry="20"
-           rx="20"
-           y="137.74673"
-           x="55.558392"
-           height="100"
-           width="200"
-           id="rect3074"
-           style="fill:#000000;fill-opacity:0.39215686;stroke:#ffffff;stroke-width:2;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;filter:url(#filter4068)"
-           inkscape:export-filename="/home/st/Documents/Work/keycloak-presentation/grants-1.png"
-           inkscape:export-xdpi="90"
-           inkscape:export-ydpi="90" />
-        <rect
-           inkscape:export-ydpi="90"
-           inkscape:export-xdpi="90"
-           inkscape:export-filename="/home/st/Documents/Work/keycloak-presentation/grants-1.png"
-           ry="20"
-           rx="20"
-           y="137.74673"
-           x="54.548237"
-           height="100"
-           width="200"
-           id="rect3076"
-           style="fill:#ffffff;fill-opacity:0.39215686;stroke:#ffffff;stroke-width:2;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
-        <text
-           inkscape:export-ydpi="90"
-           inkscape:export-xdpi="90"
-           inkscape:export-filename="/home/st/Documents/Work/keycloak-presentation/grants-1.png"
-           sodipodi:linespacing="125%"
-           id="text3078"
-           y="179.92273"
-           x="154.67648"
-           style="font-size:14px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans"
-           xml:space="preserve"><tspan
-             style="font-size:32px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Medium"
-             y="179.92273"
-             x="154.67648"
-             id="tspan3080"
-             sodipodi:role="line">Authz</tspan><tspan
-             style="font-size:32px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Medium"
-             y="219.92273"
-             x="154.67648"
-             sodipodi:role="line"
-             id="tspan3082">Service</tspan></text>
-      </g>
+       transform="translate(480.86761,26.412761)"
+       id="g4012">
+      <rect
+         style="opacity:0.98999999;fill:#000000;fill-opacity:0.29411765;stroke:none;filter:url(#filter3976)"
+         id="rect4014"
+         width="216.5"
+         height="108"
+         x="201"
+         y="266.14331"
+         rx="20"
+         ry="20"
+         transform="translate(212.28427,269.50306)" />
+      <rect
+         ry="20"
+         rx="20"
+         y="266.14331"
+         x="201"
+         height="108"
+         width="216.5"
+         id="rect4016"
+         style="fill:none;stroke:#ffffff;stroke-width:2.79999995;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         transform="translate(212.28427,269.50306)" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text4018"
+         y="578.41437"
+         x="520.68304"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu"
+         xml:space="preserve"><tspan
+           style="font-size:32px;text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1"
+           y="578.41437"
+           x="520.68304"
+           id="tspan4020"
+           sodipodi:role="line">Active</tspan><tspan
+           style="font-size:32px;text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1"
+           y="618.41437"
+           x="520.68304"
+           sodipodi:role="line"
+           id="tspan5795">Directory</tspan></text>
     </g>
     <g
-       id="g3108"
-       transform="translate(601.57143,202)">
-      <g
-         inkscape:export-ydpi="90"
-         inkscape:export-xdpi="90"
-         inkscape:export-filename="/home/st/Documents/Work/keycloak-presentation/overview.png"
-         transform="translate(251.42857,0)"
-         id="g3110">
-        <rect
-           inkscape:export-ydpi="90"
-           inkscape:export-xdpi="90"
-           inkscape:export-filename="/home/st/Documents/Work/keycloak-presentation/grants-1.png"
-           style="fill:#000000;fill-opacity:0.39215686;stroke:#ffffff;stroke-width:2;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;filter:url(#filter4068)"
-           id="rect3112"
-           width="200"
-           height="100"
-           x="55.558392"
-           y="137.74673"
-           rx="20"
-           ry="20" />
-        <rect
-           style="fill:#ffffff;fill-opacity:0.39215686;stroke:#ffffff;stroke-width:2;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-           id="rect3114"
-           width="200"
-           height="100"
-           x="54.548237"
-           y="137.74673"
-           rx="20"
-           ry="20"
-           inkscape:export-filename="/home/st/Documents/Work/keycloak-presentation/grants-1.png"
-           inkscape:export-xdpi="90"
-           inkscape:export-ydpi="90" />
-        <text
-           xml:space="preserve"
-           style="font-size:14px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans"
-           x="154.67648"
-           y="179.92273"
-           id="text3116"
-           sodipodi:linespacing="125%"
-           inkscape:export-filename="/home/st/Documents/Work/keycloak-presentation/grants-1.png"
-           inkscape:export-xdpi="90"
-           inkscape:export-ydpi="90"><tspan
-             sodipodi:role="line"
-             id="tspan3118"
-             x="154.67648"
-             y="179.92273"
-             style="font-size:32px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Medium">Authz</tspan><tspan
-             id="tspan3120"
-             sodipodi:role="line"
-             x="154.67648"
-             y="219.92273"
-             style="font-size:32px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Medium">Policies</tspan></text>
-      </g>
-    </g>
-    <g
-       id="g3126"
-       transform="translate(601.57143,592)">
-      <g
-         inkscape:export-ydpi="90"
-         inkscape:export-xdpi="90"
-         inkscape:export-filename="/home/st/Documents/Work/keycloak-presentation/overview.png"
-         transform="translate(251.42857,0)"
-         id="g3128">
-        <rect
-           inkscape:export-ydpi="90"
-           inkscape:export-xdpi="90"
-           inkscape:export-filename="/home/st/Documents/Work/keycloak-presentation/grants-1.png"
-           style="fill:#000000;fill-opacity:0.39215686;stroke:#ffffff;stroke-width:2;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;filter:url(#filter4068)"
-           id="rect3130"
-           width="200"
-           height="100"
-           x="55.558392"
-           y="137.74673"
-           rx="20"
-           ry="20" />
-        <rect
-           style="fill:#ffffff;fill-opacity:0.39215686;stroke:#ffffff;stroke-width:2;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-           id="rect3132"
-           width="200"
-           height="100"
-           x="54.548237"
-           y="137.74673"
-           rx="20"
-           ry="20"
-           inkscape:export-filename="/home/st/Documents/Work/keycloak-presentation/grants-1.png"
-           inkscape:export-xdpi="90"
-           inkscape:export-ydpi="90" />
-        <text
-           xml:space="preserve"
-           style="font-size:14px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans"
-           x="154.67648"
-           y="179.92273"
-           id="text3134"
-           sodipodi:linespacing="125%"
-           inkscape:export-filename="/home/st/Documents/Work/keycloak-presentation/grants-1.png"
-           inkscape:export-xdpi="90"
-           inkscape:export-ydpi="90"><tspan
-             sodipodi:role="line"
-             id="tspan3136"
-             x="154.67648"
-             y="179.92273"
-             style="font-size:32px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Medium">Authz</tspan><tspan
-             id="tspan3138"
-             sodipodi:role="line"
-             x="154.67648"
-             y="219.92273"
-             style="font-size:32px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Medium">Interceptor</tspan></text>
-      </g>
-    </g>
-    <g
-       transform="translate(140.57143,592)"
-       id="g3140">
-      <g
-         id="g3142"
-         transform="translate(251.42857,0)"
-         inkscape:export-filename="/home/st/Documents/Work/keycloak-presentation/overview.png"
-         inkscape:export-xdpi="90"
-         inkscape:export-ydpi="90">
-        <rect
-           ry="20"
-           rx="20"
-           y="137.74673"
-           x="55.558392"
-           height="100"
-           width="200"
-           id="rect3144"
-           style="fill:#000000;fill-opacity:0.39215686;stroke:#ffffff;stroke-width:2;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;filter:url(#filter4068)"
-           inkscape:export-filename="/home/st/Documents/Work/keycloak-presentation/grants-1.png"
-           inkscape:export-xdpi="90"
-           inkscape:export-ydpi="90" />
-        <rect
-           inkscape:export-ydpi="90"
-           inkscape:export-xdpi="90"
-           inkscape:export-filename="/home/st/Documents/Work/keycloak-presentation/grants-1.png"
-           ry="20"
-           rx="20"
-           y="137.74673"
-           x="54.548237"
-           height="100"
-           width="200"
-           id="rect3146"
-           style="fill:#ffffff;fill-opacity:0.39215686;stroke:#ffffff;stroke-width:2;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
-        <text
-           inkscape:export-ydpi="90"
-           inkscape:export-xdpi="90"
-           inkscape:export-filename="/home/st/Documents/Work/keycloak-presentation/grants-1.png"
-           sodipodi:linespacing="125%"
-           id="text3148"
-           y="179.92273"
-           x="154.67648"
-           style="font-size:14px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans"
-           xml:space="preserve"><tspan
-             style="font-size:32px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Medium"
-             y="179.92273"
-             x="154.67648"
-             id="tspan3150"
-             sodipodi:role="line">Auth</tspan><tspan
-             style="font-size:32px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Medium"
-             y="219.92273"
-             x="154.67648"
-             sodipodi:role="line"
-             id="tspan3152">Interceptor</tspan></text>
-      </g>
+       id="g4022"
+       transform="translate(480.86761,183.33563)">
+      <rect
+         ry="20"
+         rx="20"
+         transform="translate(212.28427,269.50306)"
+         y="266.14331"
+         x="201"
+         height="108"
+         width="216.5"
+         id="rect4024"
+         style="opacity:0.98999999;fill:#000000;fill-opacity:0.29411765;stroke:none;filter:url(#filter3976)" />
+      <rect
+         style="fill:none;stroke:#ffffff;stroke-width:2.79999995;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         id="rect4026"
+         width="216.5"
+         height="108"
+         x="201"
+         y="266.14331"
+         transform="translate(212.28427,269.50306)"
+         rx="20"
+         ry="20" />
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu"
+         x="520.68304"
+         y="604.90637"
+         id="text4028"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan4030"
+           x="520.68304"
+           y="604.90637"
+           style="text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1">Sessions</tspan></text>
     </g>
     <path
-       style="fill:none;stroke:#ffffff;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow2MendI)"
-       d="m 646.08296,779.81399 257.80205,0"
-       id="path3154"
+       style="stroke-linejoin:miter;marker-end:url(#Arrow1SendKq);stroke-opacity:1;stroke:#afafaf;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-width:10;fill:none"
+       d="m 651.2022,615.35095 c 3.10738,1.55369 201.97993,0 201.97993,0"
+       id="path4032"
+       inkscape:connector-curvature="0" />
+    <path
        inkscape:connector-curvature="0"
-       inkscape:export-filename="/home/st/Documents/Work/keycloak-presentation/overview.png"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90"
+       id="path4912"
+       d="m 651.2022,556.07177 c 3.10738,1.55369 201.97993,-94 201.97993,-94"
+       style="fill:none;stroke:#afafaf;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1SendKq)"
        sodipodi:nodetypes="cc" />
     <path
-       sodipodi:nodetypes="cc"
-       inkscape:export-ydpi="90"
-       inkscape:export-xdpi="90"
-       inkscape:export-filename="/home/st/Documents/Work/keycloak-presentation/overview.png"
+       style="fill:none;stroke:#afafaf;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1SendKq)"
+       d="m 651.2022,676.81013 c 3.10738,1.55369 201.97993,96 201.97993,96"
+       id="path4914"
        inkscape:connector-curvature="0"
-       id="path3156"
-       d="m 547.62565,730.18932 0,-93.80205"
-       style="fill:none;stroke:#ffffff;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow2MendI)" />
-    <path
-       style="fill:none;stroke:#ffffff;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow2MendI)"
-       d="m 1008.6257,730.18932 0,-93.80205"
-       id="path3158"
-       inkscape:connector-curvature="0"
-       inkscape:export-filename="/home/st/Documents/Work/keycloak-presentation/overview.png"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90"
        sodipodi:nodetypes="cc" />
-    <path
-       sodipodi:nodetypes="cc"
-       inkscape:export-ydpi="90"
-       inkscape:export-xdpi="90"
-       inkscape:export-filename="/home/st/Documents/Work/keycloak-presentation/overview.png"
-       inkscape:connector-curvature="0"
-       id="path3160"
-       d="m 1008.6257,535.18932 0,-93.80205"
-       style="fill:none;stroke:#ffffff;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow2MendI)" />
-    <path
-       sodipodi:nodetypes="cc"
-       inkscape:export-ydpi="90"
-       inkscape:export-xdpi="90"
-       inkscape:export-filename="/home/st/Documents/Work/keycloak-presentation/overview.png"
-       inkscape:connector-curvature="0"
-       id="path3162"
-       d="m 280.08296,779.81399 163.80205,0"
-       style="fill:none;stroke:#ffffff;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow2MendI)" />
-    <path
-       style="fill:none;stroke:#ffffff;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow2MendI)"
-       d="m 1108.083,779.81399 222.802,0"
-       id="path3164"
-       inkscape:connector-curvature="0"
-       inkscape:export-filename="/home/st/Documents/Work/keycloak-presentation/overview.png"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90"
-       sodipodi:nodetypes="cc" />
-    <text
-       inkscape:export-ydpi="90"
-       inkscape:export-xdpi="90"
-       inkscape:export-filename="/home/st/Documents/Work/keycloak-presentation/grants-1.png"
-       sodipodi:linespacing="125%"
-       id="text3189"
-       y="879.78619"
-       x="947.84448"
-       style="font-size:14px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans"
-       xml:space="preserve"><tspan
-         style="font-size:22px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Medium"
-         y="879.78619"
-         x="947.84448"
-         id="tspan3191"
-         sodipodi:role="line">Forbidden</tspan></text>
-    <path
-       style="fill:none;stroke:#ffffff;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow2MendI)"
-       d="m 545.49113,829.30415 0,60.85153 -241,0"
-       id="path4035"
-       inkscape:connector-curvature="0"
-       inkscape:export-filename="/home/st/Documents/Work/keycloak-presentation/overview.png"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90"
-       sodipodi:nodetypes="ccc" />
-    <text
-       xml:space="preserve"
-       style="font-size:14px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans"
-       x="466.84448"
-       y="879.78619"
-       id="text4041"
-       sodipodi:linespacing="125%"
-       inkscape:export-filename="/home/st/Documents/Work/keycloak-presentation/grants-1.png"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90"><tspan
-         sodipodi:role="line"
-         id="tspan4043"
-         x="466.84448"
-         y="879.78619"
-         style="font-size:22px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Medium">Unauthorized</tspan></text>
-    <path
-       sodipodi:nodetypes="ccc"
-       inkscape:export-ydpi="90"
-       inkscape:export-xdpi="90"
-       inkscape:export-filename="/home/st/Documents/Work/keycloak-presentation/overview.png"
-       inkscape:connector-curvature="0"
-       id="path4065"
-       d="m 1009.4911,829.30415 0,60.85153 -240.99997,0"
-       style="fill:none;stroke:#ffffff;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow2MendI)" />
-    <text
-       inkscape:export-ydpi="90"
-       inkscape:export-xdpi="90"
-       inkscape:export-filename="/home/st/Documents/Work/keycloak-presentation/grants-1.png"
-       sodipodi:linespacing="125%"
-       id="text4067"
-       y="767.78619"
-       x="318.84448"
-       style="font-size:14px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans"
-       xml:space="preserve"><tspan
-         style="font-size:22px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Medium"
-         y="767.78619"
-         x="318.84448"
-         id="tspan4069"
-         sodipodi:role="line">Request</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:14px;font-style:normal;font-weight:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans"
-       x="1117.3167"
-       y="767.78619"
-       id="text4077"
-       sodipodi:linespacing="125%"
-       inkscape:export-filename="/home/st/Documents/Work/keycloak-presentation/grants-1.png"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90"><tspan
-         sodipodi:role="line"
-         id="tspan4079"
-         x="1117.3167"
-         y="767.78619"
-         style="font-size:22px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;text-anchor:start;fill:#ffffff;fill-opacity:1;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Medium">Invoke resource</tspan></text>
   </g>
 </svg>

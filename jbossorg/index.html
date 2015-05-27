@@ -17,6 +17,9 @@
                 document.getElementById('logged-in').style.display = 'block';
                 document.getElementById('not-logged-in').style.display = 'none';
                 document.getElementById('username').innerHTML = keycloak.tokenParsed['preferred_username'];
+            }).error(function() {
+                console.error("Failed to retrieve token");
+                keycloak.clearToken();
             });
         } else {
             document.getElementById('logged-in').style.display = 'none';
