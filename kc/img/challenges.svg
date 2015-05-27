@@ -15,7 +15,7 @@
    id="svg5756"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="question.svg">
+   sodipodi:docname="challenges.svg">
   <defs
      id="defs5758">
     <marker
@@ -233,9 +233,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.979899"
-     inkscape:cx="297.30131"
-     inkscape:cy="68.778162"
+     inkscape:zoom="7.4246212"
+     inkscape:cx="407.16023"
+     inkscape:cy="107.23565"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -268,25 +268,32 @@
      transform="translate(-81.187981,-303.9255)">
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:386.3866272px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:0.39215686;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="364.65723"
-       y="595.26813"
+       style="font-style:normal;font-weight:normal;font-size:386.3866272px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+       x="388.47107"
+       y="597.83026"
        id="text6811"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan6813"
-         x="364.65723"
-         y="595.26813">?</tspan></text>
+         x="388.47107"
+         y="597.83026">?</tspan></text>
+    <rect
+       style="opacity:1;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:10;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect19198"
+       width="20.741798"
+       height="7.5424724"
+       x="491.71399"
+       y="514.62799" />
     <text
        sodipodi:linespacing="125%"
        id="text6470-7"
-       y="459.60968"
-       x="97.161201"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:90.96806335px;line-height:125%;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono, Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:0.39215686;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       y="522.16516"
+       x="97.487701"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:90.96806335px;line-height:125%;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono, Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#999999;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:90.96806335px;line-height:125%;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono, Bold';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:0.39215686"
-         y="459.60968"
-         x="97.161201"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:90.96806335px;line-height:125%;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono, Bold';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#999999;fill-opacity:1;"
+         y="522.16516"
+         x="97.487701"
          id="tspan6472-4"
          sodipodi:role="line">CHALLENGES</tspan></text>
   </g>
