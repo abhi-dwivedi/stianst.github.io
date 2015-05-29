@@ -15,7 +15,7 @@
    viewBox="0 0 570.36013 260.02212"
    id="svg5756"
    version="1.1"
-   inkscape:version="0.91 r13725"
+   inkscape:version="0.48.5 r10040"
    sodipodi:docname="demo.svg">
   <defs
      id="defs5758">
@@ -723,7 +723,7 @@
        x2="671.62537"
        y2="530.22467"
        gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(-2.9898475,0)" />
+       gradientTransform="translate(-20.489848,-1.4285715)" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -732,14 +732,14 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="3.959798"
-     inkscape:cx="261.92773"
-     inkscape:cy="47.264726"
+     inkscape:zoom="2.8"
+     inkscape:cx="188.62904"
+     inkscape:cy="111.74652"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="2048"
-     inkscape:window-height="1128"
+     inkscape:window-width="1920"
+     inkscape:window-height="1056"
      inkscape:window-x="0"
      inkscape:window-y="24"
      inkscape:window-maximized="1"
@@ -768,13 +768,13 @@
     <text
        sodipodi:linespacing="125%"
        id="text6470-7"
-       y="579.20081"
-       x="350.86551"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:134.54475403px;line-height:125%;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono, Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:url(#linearGradient21020);fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       y="577.77222"
+       x="333.36551"
+       style="font-size:134.54475403px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:url(#linearGradient21020);fill-opacity:1;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:'DejaVu Sans Mono, Bold'"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:134.54475403px;line-height:125%;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono, Bold';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:url(#linearGradient21020);fill-opacity:1"
-         y="579.20081"
-         x="350.86551"
+         style="font-size:134.54475403px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:url(#linearGradient21020);fill-opacity:1;font-family:DejaVu Sans Mono;-inkscape-font-specification:'DejaVu Sans Mono, Bold'"
+         y="577.77222"
+         x="333.36551"
          id="tspan6472-4"
          sodipodi:role="line">DEMO</tspan></text>
     <g
@@ -1101,7 +1101,8 @@
          cy="489.23578"
          id="circle161"
          rx="0.91267145"
-         ry="0.89532208" />
+         ry="0.89532208"
+         d="m 264.74678,489.23578 c 0,0.49447 -0.40862,0.89532 -0.91267,0.89532 -0.50406,0 -0.91268,-0.40085 -0.91268,-0.89532 0,-0.49447 0.40862,-0.89532 0.91268,-0.89532 0.50405,0 0.91267,0.40085 0.91267,0.89532 z" />
       <path
          style="fill:url(#linearGradient8224)"
          inkscape:connector-curvature="0"
@@ -1151,7 +1152,7 @@
          inkscape:connector-curvature="0"
          id="rect5082"
          d="m 353.23598,643.05225 c -5.54,0 -10,4.46 -10,10 l 0,40.71484 c 0,5.54 4.46,10 10,10 l 25.18945,0 0,3.78711 -8.92773,0 0,7.2168 45.71484,0 0,-7.2168 -8.92969,0 0,-3.78711 25.18946,0 c 5.54,0 10,-4.46 10,-10 l 0,-40.71484 c 0,-5.54 -4.46,-10 -10,-10 l -78.23633,0 z m 4.5039,5.63867 69.22852,0 c 4.902,0 8.84766,3.63165 8.84766,8.14258 l 0,33.15234 c 0,4.51093 -3.94566,8.14258 -8.84766,8.14258 l -69.22852,0 c -4.90199,0 -8.84765,-3.63165 -8.84765,-8.14258 l 0,-33.15234 c 0,-4.51093 3.94566,-8.14258 8.84765,-8.14258 z"
-         style="opacity:0.5;fill:#000000;fill-opacity:1;stroke:none;stroke-opacity:1" />
+         style="opacity:1;fill:#999999;fill-opacity:1;stroke:#ffffff;stroke-opacity:1;stroke-width:0.83364207000000001;stroke-miterlimit:4;stroke-dasharray:none" />
       <path
          style="opacity:0.5;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5.83512926;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker5848)"
          d="M 393.11508,693.16031 376.02923,676.79567"
